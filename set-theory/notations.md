@@ -4,7 +4,8 @@
 
 |                   | Latex | Unicode | 意义                  |
 | ----------------- | ----- | ------- | ------------------- |
-| eq                |       | =       | 集合相等                |
+| equal             |       | =       | 相等                  |
+| not equal         |       | ≠       | 不相等                 |
 | elements of       |       | ∈       | 属于                  |
 | not element of    |       | ∉       | 不属于                 |
 | subset            |       | ⊆       | 子集                  |
