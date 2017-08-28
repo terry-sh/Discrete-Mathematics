@@ -22,4 +22,4 @@
 | union             |       | ∪       |                     |
 | intersection      |       | ∩       |                     |
 | cartesian product |       | ×       | 笛卡尔积                |
-|                   |       |         |                     |
+| empty set         |       | ∅       | 空集                   |
