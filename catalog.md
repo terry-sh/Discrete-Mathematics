@@ -1,8 +1,8 @@
 # 目录
 
   - [集合论](set-theory/readme.md)
-  - [关系]()
-  - [函数与算法]()
+  - [关系](relations/readme.md)
+  - [函数与算法](functions/readme.md)
   - [逻辑与命题演算](logic/readme.md)
   - [向量与矩阵](vector-and-matrix/readme.md)
   - [计数]()
