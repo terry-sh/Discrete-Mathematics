@@ -24,3 +24,5 @@
 | cartesian product | \times                 | ×       | 笛卡尔积 |
 | empty set         | \emptyset; \varnothing | ∅       | 空集   |
 
+
+[LaTex Symbols](https://oeis.org/wiki/List_of_LaTeX_mathematical_symbols)
