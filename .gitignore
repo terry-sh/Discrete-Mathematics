@@ -4,6 +4,10 @@
 *.tmp
 ~*
 
+*.exe
+*.out
+*.o
+*.obj
 
 *.aux
 *.fdb_latexmk
