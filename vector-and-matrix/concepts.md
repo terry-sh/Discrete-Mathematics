@@ -68,7 +68,7 @@ a_{m1} & a_{m2} & \cdots & a_{mn} \\
 $$
 
 其中 m 个水平排列的数表称为矩阵A的行，而n个竖直排列的数表称为列。元素a_{ij}处于第i行和第j列，称为ij表值。
-通常将矩阵简记为 A = [a_0]。
+通常将矩阵简记为 A = [a_{ij}]。
 
 具有m个行和n个列的矩阵称为m乘以n矩阵，记作m\times n。数偶m和n称为矩阵的型。
 
@@ -81,3 +81,45 @@ $$
 **零矩阵** 表值全部为零的矩阵称为零矩阵，记作 0。
 
 ### 矩阵的加法和数乘
+
+设 A = [a_{ij}] 与 B = [b_{ij}] 为两个m \times n矩阵，即同型矩阵。
+
+A与B的**和**记作 A + B，即：
+
+$$
+A + B = \begin{bmatrix}
+a_{11} + b_{11} & a_{12} + b_{12} & \cdots & a_{1n} + b_{1n} \\
+a_{21} + b_{21} & a_{22} + b_{22} & \cdots & a_{2n} + b_{2n} \\
+\vdots & \vdots & \ddots & \vdots \\
+a_{m1} + b_{m1} & a_{m2} + b_{m2} & \cdots & a_{mn} + b_{mn} \\
+\end{bmatrix}
+$$
+
+数 k 与矩阵A 的 *积*，记作 k \cdot A 或 简记 kA，是将数k 乘以矩阵A的每一个元素得到的矩阵，即：
+
+$$
+kA = \begin{bmatrix}
+ka_{11} & ka_{12} & \cdots & ka_{1n} \\
+ka_{21} & ka_{22} & \cdots & ka_{2n} \\
+\vdots  & \vdots  & \ddots & \vdots \\
+ka_{m1} & ka_{12} & \cdots & ka_{mn} \\
+\end{bmatrix}
+$$
+
+同样可以定义：
+
+-A = (-1)A, A - B = A + (-B)
+
+**负矩阵** 矩阵-A称为矩阵A的负矩阵。
+
+不同型的矩阵的加法无法定义。
+
+**定理5.1** 设A，B，C为同型矩阵，k，k'为数，则：
+  1. (A + B) + C = A + (B + C)
+  2. A + 0 = 0 + A
+  3. A + (-A) = A - A = 0
+  4. A + B = B + A
+  5. k(A + B) = kA + kB
+  6. (k + k') A = kA + k'A
+  7. (kk')A = k(k'A)
+  8. 1A = A
