@@ -123,3 +123,44 @@ $$
   6. (k + k') A = kA + k'A
   7. (kk')A = k(k'A)
   8. 1A = A
+
+## 矩阵的乘法
+
+矩阵A与B的乘积，记作AB。
+
+元素个数相同的行矩阵 A = [a_i] 与 列矩阵 B = [b_i]的积 AB 定义为：
+
+$$
+AB = \begin{bmatrix}
+a_1, a_2, a_3, \cdots, a_n
+\end{bmatrix}
+\begin{bmatrix}
+b_1 \\
+b_2 \\
+\vdots \\
+b_n
+\end{bmatrix}
+= a_1b_1 + a_2b_2 + \cdots + a_nb_n
+= \sum_{k=1}^{n} a_kb_k
+$$
+
+### 矩阵的乘法
+设 A = [a_{ik}] 与 B = [b_{kj}]为矩阵，满足 A 的列数等于 B 的行数。
+即 A 为 m \time p矩阵，而 B 为 p \times n 矩阵，则 A 与 B的乘积为一个 m \times n 矩阵，
+其第ij元素为 A 的第 i 行乘以 B 的第 j 列的结果。
+
+其中
+
+$$
+c_{ij}
+= a_{i1} b_{1j} + a_{i2} b_{2j} + ... + a_{ip} b_{pj}
+= \sum_{k=1}^{p} a_{ik}b_{kj}
+$$
+
+**定理 5.2** 设 A，B，C为矩阵，并设以下乘法和加法均有定义。
+
+  1. (AB)C = A(BC) (结合律)
+  2. A(B + C) = AB + AC (左分配律)
+  3. (B + C)A = BA + CA (右分配律)
+  4. k(AB) = (kA)B = A(kB) (k为数)
+  5. 0A = 0, B0 = 0（0为零矩阵）
