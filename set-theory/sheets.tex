@@ -1,0 +1,86 @@
+\documentclass{book}
+%\usepackage{mathrsfs}
+\usepackage{amssymb}
+%\usepackage{amsmath}
+
+\begin{document}
+
+\chapter{Set theory}
+
+\section{Concepts}
+
+\begin{itemize}
+  \item Set
+  \item Element
+  \item Subset
+  \item Superset
+\end{itemize}
+
+\section{Special sets}
+
+\begin{itemize}
+  \item Universal set: U
+  \item Empty set: $\emptyset$
+  \item Natural numbers: $\mathbb{N}$
+  \item Integer: $\mathbb{Z}$
+  \item Rational numbers: $\mathbb{Q}$
+  \item Real numbers: $\mathbb{R}$
+  \item Complex numbers: $\mathbb{C}$
+\end{itemize}
+
+\section{Set operations}
+
+\begin{itemize}
+  \item Union:        $A \cup B = \{ x \mid x \in A \lor x \in B \}$
+  \item Interception: $A \cap B = \{ x \mid x \in A \land x \in B \}$
+\end{itemize}
+
+Properties:
+\begin{itemize}
+  \item $A \cap B \subseteq A, A \cap B \subseteq B$
+  \item $A \subseteq A \cup B, B \subseteq A \cup B$
+\end{itemize}
+
+Theroem 1.3: For any sets A and B, we have:
+$$
+A \cap B \subseteq A \subseteq A \cup B \\
+A \cap B \subseteq B \subseteq A \cup B
+$$
+
+Theorem 1.4: the following are equivalent:
+$$
+A \subseteq B, A \cap B = A, A \cup B = B
+$$
+
+Complement
+$$
+A^C = \{ x | x \in U, x \not\in A \}
+$$
+
+Relative Complement
+
+The relative complement of A and B, donoted by $A\setminus B$, is:
+$$
+A\setminus B = \{ x | x \in A, x \not\in B \}
+$$
+
+Symmetric difference
+
+Symmetric difference of sets A and B, denoted by $A \oplus B$, is:
+$$
+A \oplus B = (A \cup B)\setminus(A \cap B) \\
+A \oplus B = (A \setminus B) \cup (B \setminus A)
+$$
+
+\section{Venn diagrams}
+
+\section{Fundamental products}
+
+Consider $n$ distinct sets $A_1, A_2, \cdots, A_n$,
+a fundanmental product is a set of form
+
+$$
+A_1^* \cap A_2^* \cap \cdots \cap A_n^* (A_i^* = A \lor A_i^* = A^c)
+$$
+
+\end{document}
