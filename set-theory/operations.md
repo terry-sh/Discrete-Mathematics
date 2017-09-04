@@ -11,6 +11,7 @@
     A∩B = {x: x ∈ A 且 x ∈ B}
 
     如果A和B没有公共元素，则称集合A和B是不交的， A∩B = ∅。
+    此时，A与B的并集称为 不交的并(disjoint union)。
 
 ### 定理1.2
 
@@ -20,7 +21,9 @@
 
 所有属于全集U但不属于A的元素构成的集合：
 
-Ac = {x: x ∈ U, x ∉ A}。
+$$
+A^c = \{x: x \in \mathbb{U}, x \not\in A \}。
+$$
 
 也记作 A` 或者 Aᶜ。
 
@@ -34,17 +37,25 @@ A\B = {x: x ∈ A, x ∉ B}。
 
 （本质上：A\B = A ∩ B`。）
 
-## 集合的基本积
+## 集合的基本积<a href='#fundamental-products'></a>
 
 ## 对称差
 
-集合A和B的对称差，记作A+B，是所有属于A或B但不同时属于A和B的元素的集合。
+集合A和B的对称差，记作
+$$
+A\oplus B
+$$
+是所有属于A或B但不同时属于A和B的元素的集合。即：
 
-即：
-A + B = (A ∪ B) \ (A ∩ B)
+$$
+A \oplus B = \{x | (x \in A \land x \not\in B) \lor (x \in B \land x \not\in A)\}
+$$
 
-即：
-A + B = (A \ B) ∪ (B \ A)
+性质：
+$$
+A \oplus B = (A \cup B) \setminus (A \cap B) \\
+A \oplus B = (A \setminus B) \cup (B \setminus A)
+$$
 
 ## 集合的代数运算及对偶性
 
