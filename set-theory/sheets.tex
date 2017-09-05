@@ -1,11 +1,13 @@
-\documentclass{book}
+\documentclass{article}
 %\usepackage{mathrsfs}
 \usepackage{amssymb}
-%\usepackage{amsmath}
+\usepackage{amsmath}
 
+% table padding
+\renewcommand{\arraystretch}{1.5}
 \begin{document}
 
-\chapter{Set theory}
+\title{Set theory}
 
 \section{Concepts}
 
@@ -30,10 +32,17 @@
 
 \section{Set operations}
 
-\begin{itemize}
-  \item Union:        $A \cup B = \{ x \mid x \in A \lor x \in B \}$
-  \item Interception: $A \cap B = \{ x \mid x \in A \land x \in B \}$
-\end{itemize}
+\subsection{Union and interception}
+
+\subsubsection{Union}
+$$
+A \cup B = \{ x \mid x \in A \lor x \in B \}
+$$
+
+\subsubsection{Interception}
+$$
+A \cap B = \{ x \mid x \in A \land x \in B \}
+$$
 
 Properties:
 \begin{itemize}
@@ -41,46 +50,86 @@ Properties:
   \item $A \subseteq A \cup B, B \subseteq A \cup B$
 \end{itemize}
 
-Theroem 1.3: For any sets A and B, we have:
-$$
+Theorem 1.3: For any sets A and B, we have:
+\begin{gather*}
 A \cap B \subseteq A \subseteq A \cup B \\
 A \cap B \subseteq B \subseteq A \cup B
-$$
+\end{gather*}
 
-Theorem 1.4: the following are equivalent:
+Theorem 1.4: The followings are equivalent:
 $$
 A \subseteq B, A \cap B = A, A \cup B = B
 $$
 
-Complement
+\subsection{Complement}
+
+\subsubsection{Absolute complement}
+
 $$
-A^C = \{ x | x \in U, x \not\in A \}
+A^c = \{ x \mid x \in \text{U}, x \not\in A \}
 $$
 
-Relative Complement
+\subsubsection{Relative Complement}
 
 The relative complement of A and B, donoted by $A\setminus B$, is:
 $$
-A\setminus B = \{ x | x \in A, x \not\in B \}
+A\setminus B = \{ x \mid x \in A, x \not\in B \}
 $$
 
-Symmetric difference
+\subsubsection{Symmetric difference}
 
 Symmetric difference of sets A and B, denoted by $A \oplus B$, is:
 $$
-A \oplus B = (A \cup B)\setminus(A \cap B) \\
-A \oplus B = (A \setminus B) \cup (B \setminus A)
+A \oplus B = \{ x \mid (x \in A \land x \not\in B) \lor (x \in B \land x \not\in A) \}
 $$
 
-\section{Venn diagrams}
+That is:
+\begin{gather*}
+A \oplus B = (A \cup B)\setminus(A \cap B) \\
+A \oplus B = (A \setminus B) \cup (B \setminus A)
+\end{gather*}
 
-\section{Fundamental products}
+\subsection{Fundamental products}
 
 Consider $n$ distinct sets $A_1, A_2, \cdots, A_n$,
 a fundanmental product is a set of form
 
 $$
-A_1^* \cap A_2^* \cap \cdots \cap A_n^* (A_i^* = A \lor A_i^* = A^c)
+A_1^* \cap A_2^* \cap \cdots \cap A_n^* (A_i^* = A_i \lor A_i^* = A_i^c)
 $$
+
+\section{Algebra of sets, duality}
+
+Theorem 1.5: Sets satisfy the laws in table:
+\begin{table}
+\caption{Laws of the algebra of sets}
+\label{Table: 1-1}
+\begin{tabular}{l | l | l}
+  \hline
+  Idempotent laws  & $A \cup A = A$ & $A \cap A = A$ \\
+  \hline
+  Associative laws & $(A \cup B) \cup C = A \cup (B \cup C)$ & $(A \cap B) \cap C = A \cap (B \cap C)$ \\
+  \hline
+  Commutative laws & $A \cup B = B \cup A$ & $A \cap B = B \cap A$ \\
+  \hline
+  Distributive laws
+  & $A \cup (B \cap C) = (A \cup B) \cap (A \cup C)$
+  & $A \cap (B \cup C) = (A \cap B) \cup (A \cap C)$ \\
+  \hline
+  Identity laws & $A \cup \emptyset = A$      & $A \cap \text{U} = A$ \\
+                & $A \cup \text{U} = \text{U}$ & $A \cap \emptyset = \emptyset$ \\
+  \hline
+  Involution laws & $(A^c)^c = A$ & \\
+
+  \hline
+  Complement laws & $A \cup A^c = \text{U}$ & $A \cap A^c = \emptyset$ \\
+                  & $\text{U}^c = \emptyset$ & $\emptyset^c = \text{U}$ \\
+  \hline
+  DeMorgan's laws & $(A\cup B)^c = A^c \cap B^c$ & $(A\cap B)^c = A^c \cap B^c$\\
+  \hline
+\end{tabular}
+\end{table}
+
+\section{Venn diagrams}
 
 \end{document}
