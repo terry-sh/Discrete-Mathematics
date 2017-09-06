@@ -5,7 +5,7 @@
   - [函数与算法](functions/readme.md)
   - [逻辑与命题演算](logic-and-proposition/readme.md)
   - [向量与矩阵](vector-and-matrix/readme.md)
-  - [计数]()
+  - [计数](counting/readme.md)
   - [概率论](probability/readme.md)
   - [图论](graph-theory/readme.md)
   - [有向图]()
