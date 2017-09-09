@@ -15,8 +15,8 @@
 **有限概率空间** 设S为有限样本空间，S = {a_1, a_2, ..., a_n}，若对S的每个点a_i，指定一个字数p_i，
 称为a_i的概率，且满足以下性质：
 
- 1. 每个 p_i 非负，即 p_i >= 0;
- 2. 所有p_i 的和为1， 即 p_1 + p_2 + ... + p_n = 1;
+  1. 每个 p_i 非负，即 p_i >= 0;
+  2. 所有p_i 的和为1， 即 p_1 + p_2 + ... + p_n = 1;
 
 则称为**有限概率空间**，或称为**概率模型**。
 
@@ -54,6 +54,41 @@ $$
 
 **定理7.3** 设\emptyset为空集，A、B为任意两个事件，则
 
-  1. P(\emptyset) = 0
-  2. P(A\B) = P(A) - P(A\cap B)
-  3. A \subseteq B \implies P(A) <= P(B)
+    1. P(\emptyset) = 0
+    2. P(A\B) = P(A) - P(A\cap B)
+    3. A \subseteq B \implies P(A) <= P(B)
+
+## 条件概率
+
+设E为概率空间S的一个事件，P(E) > 0，在 E 已发生的条件下，事件A发生的概率。
+即在E发生的条件下，A的**条件概率**，记为P(A|E)，定义如下：
+
+$$
+P(A|E) = \frac{P(A\cap E)}{P(E)}
+$$
+
+设S为等概率空间，n(A)表示事件A的元素个数，则
+
+P(A\cap E) = \frac{n(A \cap E)}{n(S)}
+
+P(E) = \frac{n(E)}{n(S)}
+
+因此
+
+P(A|E) = \frac{P(A \cap E)}{P(E)} = \frac{n(A\cap E)}{n(E)}
+
+**定理7.5** 设S为等概率空间，A，E为两个事件，则
+$$
+P(A | E) = \frac{n(A\cap E)}{n(E)}
+$$
+
+### 条件概率的乘法定理
+
+**定理7.6** （条件概率的乘法定理） P(A \cap B) = P(A)P(B|A)
+
+推广到多个事件 A1， A2， ... Am，即：
+
+$$
+P(A_1 \cap A_2 \cap \cdots \cap A_m)
+= P(A_1) \cdot P(A_2 \mid A_1) \cdots P(A_m \mid A_1 \cap A_2 \cap \cdots \cap A_{m - 1})
+$$
