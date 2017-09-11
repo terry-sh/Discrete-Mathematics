@@ -92,3 +92,27 @@ $$
 P(A_1 \cap A_2 \cap \cdots \cap A_m)
 = P(A_1) \cdot P(A_2 \mid A_1) \cdots P(A_m \mid A_1 \cap A_2 \cap \cdots \cap A_{m - 1})
 $$
+
+## 独立事件
+
+设A，B为概率空间S的两个事件，若一个事件的发生并不影响另一个事件的发生，则称它们是**独立**的。
+即：若P(B)与P(B|A)相同，则B与A独立。
+根据乘法定理，可得：
+
+$$
+P(A\cap B) = P(A) P(B)
+$$
+
+**定义** 若P(A\cap B) = P(A) P(B)，则称事件A与B为独立的，否则称为相关的。
+
+独立性是一个对称关系，即：
+
+p(A\cap B) = P(A) P(B) \implies P(B|A) = P(B) \land P(A|B) = P(A)
+
+## 独立重复试验，二项分布
+
+定义 设S为有限概率空间，称S的有限n元组构成的概率空间Sn为n个独立重复试验的空间，且n元组的概率定义为其每个分量的概率的乘积：
+
+$$
+P((s_1, s_2, \cdots, s_n)) = P(s_1)P(s_2)\cdots P(s_n)
+$$
