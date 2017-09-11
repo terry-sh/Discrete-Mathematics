@@ -156,3 +156,37 @@ p_i = P(x_i) = P(X = x_i) = S 中像为x_i的点的概率之和。
 $$
 p_i = P(x_i) = \frac{S中像为x_i的点数}{S中的点数}
 $$
+
+### 随机变量的期望
+
+设X为随机变量，关于X的两个重要度量（参数）：X的均值，记为\mu 或 \mu_x 和 X 的标准差记为 \sigma 或 \sigma _x。
+
+均值\mu也称为X的期望，记为E(X)。
+
+$$
+\mu = E(X) = x_1 p_1 + x_2 p_2 + \cdots + x_n p_n = \sum_{x_i}{p_i}
+$$
+
+**随机变量的方差与标准差**
+
+方差Var(X)与标准差\sigma：
+
+$$
+Var(X) = (x_1 - \mu)^2 p_1 + (x_2 - \mu)^2 p_2 + \cdots + (x_n - \mu)^2 p_n = \sum (x_i - \mu)^2 p_i
+= E((X-\mu)^2)
+$$
+
+又：
+$$
+Var(X) = x_1^2 p_1 + x_2^2 p_2 + \cdots + x_n^2 p_n - \mu^2 = \sum x_i^2 p_i - \mu^2 = E(X^2) - \mu^2
+$$
+
+### 二项分布
+
+考虑二项试验B(n, p)，k次成功数X是一个随机变量，
+
+定理7.9 考察二项分布B(n, p)，则：
+
+  1. 期望值 E(X) = \mu = np
+  2. 方差 Var(X) = \sigma^2 = npq
+  3. 标准差 \sigma = \sqrt{npq}
