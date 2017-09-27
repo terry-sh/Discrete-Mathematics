@@ -10,7 +10,7 @@
   - [图论](graph-theory/readme.md)
   - [有向图]()
   - [二叉树](binary-tree/readme.md)
-  - [整数的性质]()
+  - [整数的性质](properties-of-the-integers/readme.md)
   - [代数系统](algebra/readme.md)
   - [形式语言、形式语法和自动机]()
   - [有序集与格]()
