@@ -11,3 +11,6 @@
  - 数法归纳法 mathematical induction
  - 整除 division, divide
  - 素数 primes
+ - 因数 divisor
+ - 公因数 common divisor
+ - 最大公因数 greatest common divisor
