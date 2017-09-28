@@ -361,3 +361,46 @@ $$
 $$
 \varnothing(ab) = \varnothing(a)\varnothing(b)
 $$
+
+## 同余式
+
+一个同余多项式方程 或 称一个同余方程（关于未知数x）是如下形式的方程：
+$$
+a_ {n} x^n + a_ {n - 1} x ^{n - 1} + \cdots + a_ {1} + a_ {0} \equiv 0 (\text{mod}\ m)
+$$
+
+这样的一个方程称为 n 次的，如果a_n \not\equiv 0 (\text{mod} 0).
+
+设 s \equiv t(\text{mod}\ m)，那么 s 是方程的解当且仅当 t 是方程的解。
+这样，方程的解的个数即为不同余的解的个数，即在下面集合中解的个数：
+$$
+\{ 0 , 1, 2, \cdots, m - 1 \}
+$$
+
+这样，方程的**完全解**是不同余的解的最大集合，而方程的一般解则是所有满足的解，一般解可以通过把所有m的倍数加到完全解上得到。
+
+**定理11.25** 如果 a 和 m 互素，那么 ax \equiv 1 (\text{mod}\ m)有唯一解，否则无解。
+
+**线性同余方程**
+
+考虑更一般的同余方程
+$$
+ax \equiv b(\text{mod}\ m), a\not\equiv 0(\text{mod}\ m)
+$$
+**定理11.26** 设 a 和 m 互素，那么 ax \equiv b(\text{mod}\ m)有唯一解，另外，如果s是ax\equiv 1(\text{mod}\ m)的唯一解，那么：
+$$
+x = bs
+$$
+是 ax \equiv b(\text{mod}\ m)的唯一解。
+
+**定理11.27** 设方程 ax \equiv b(\text{mod}\ m), d =\text{gcd}(a, m)
+
+1. 若 d 不整除 b，则 ax \equiv b(\text{mod\ m})无解
+
+2. 若 d 整除 b，则 ax\equiv b(\text{mod}\ m)有 d 个解，它们模 m 与下列方程的唯一解同余
+   $$
+   Ax \equiv B(\text{mod}\ M)
+   $$
+   其中，A = a/d, B = b/d，M = m/d。
+
+   因为gcd(A, M) = 1，所以可运用定理11.26求Ax=B(mod M)的解。
