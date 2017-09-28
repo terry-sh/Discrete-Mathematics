@@ -14,3 +14,11 @@
  - 因数 divisor
  - 公因数 common divisor
  - 最大公因数 greatest common divisor
+ - 最小公倍数 least common multiple
+ - 互素 relatively prime integers
+ - 算术基本定理 Fundamental Theorem of Arithmetic
+ - 同余关系 congruence relation
+ - 模 modulus
+ - 剩余类
+ - 完全剩余类
+ - 简化剩余系
