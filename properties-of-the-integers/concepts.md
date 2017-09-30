@@ -404,3 +404,29 @@ $$
    其中，A = a/d, B = b/d，M = m/d。
 
    因为gcd(A, M) = 1，所以可运用定理11.26求Ax=B(mod M)的解。
+
+### 中国剩余定理
+
+**定理11.28（中国剩余定理）** 设有方程组(*)
+$$
+x \equiv r_1 (\text{mod}\ m_1), x \equiv r_2(\text{mod}\ m_2), \cdots, x \equiv r_k (\text{mod}\ m_k)
+$$
+
+m_i 两两互素，那么方程组有一模 M = m_1 m_2 ... m_k 的唯一解。
+
+**命题11.29** 考虑以上同余方程组(*)，设 M = m1 m2 ... m_k，且
+$$
+M_1 = \frac{M}{m_1}, M_2 = \frac{M}{m_2}, \cdots, M_k = \frac{M}{m_k}
+$$
+
+(那么每一对 m_i 和 m_j 互素)，设 s_1, s_2, ...，s_k是下列还以方程的解
+
+$$
+M_1 x\equiv 1 (\text{mod}\ m_1), M_2 x \equiv 1(\text{mod}\ m_2), \cdots, M_k x \equiv 1 (\text{mod}\ m_k)
+$$
+
+那么：
+$$
+x_0 = M_1 s_1 r_1 + M_2 s_2 r_2 + \cdots + M_k s_k r_k
+$$
+是方程组的解。
