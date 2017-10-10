@@ -11,6 +11,8 @@
   - 自由半群 free semigroup
   - 自由幺半群 free monoid
   - 形式语言 language
-  - 形式语言的连接
-  - 形式语言的幂
-  - Kleene闭包
+  - 形式语言的连接 concatenation of languages
+  - 形式语言的幂 powers of a language
+  - Kleene闭包 Kleene closure
+  - 正则表达 regular expression
+  - 正则语言 regular language
