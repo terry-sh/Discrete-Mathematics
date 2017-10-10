@@ -22,9 +22,17 @@
 [P2] 对于任意整数a，或者a \in N，或者 a = 0，或者 -a \in N。
 
 序的常见记号：
-a > b     <=>  b < a
-a \leq b  <=>  a < b 或  a = b
-a \geq b  <=>  a > b 或 a = b
+$$
+a > b \iff b < a
+$$
+
+$$
+a \leq b \iff a < b \lor a = b
+$$
+
+$$
+a \geq b \iff a > b \lor a = b
+$$
 
 
 ### 不等式的基本性质
@@ -101,8 +109,7 @@ $$
 
 ## 整除算法
 
-对于整数 a 和 b，且 b \neq 0，存在 整数 q 和 r 使得 a = bq + r (0 <= r <= |b|)，
-并且 q 和 r 是唯一的。
+对于整数 a 和 b，且 b \neq 0，存在 整数 q 和 r 使得 a = bq + r (0 <= r <= |b|)，并且 q 和 r 是唯一的。
 
 算法：
 ```c
@@ -366,7 +373,7 @@ $$
 
 一个同余多项式方程 或 称一个同余方程（关于未知数x）是如下形式的方程：
 $$
-a_ {n} x^n + a_ {n - 1} x ^{n - 1} + \cdots + a_ {1} + a_ {0} \equiv 0 (\text{mod}\ m)
+a_ {n} x^n + a_ {n - 1} x ^{n - 1} + \cdots + a_ {1} x + a_ {0} \equiv 0 (\text{mod}\ m)
 $$
 
 这样的一个方程称为 n 次的，如果a_n \not\equiv 0 (\text{mod} 0).
