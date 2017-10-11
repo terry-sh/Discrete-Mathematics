@@ -18,3 +18,9 @@
   - 正则语言 regular language
   - 有限状态自动机 finite state automata (FSA)
   - Pumping引理 Pumping Lemma
+  - 形式语法 grammar
+  - 词汇 vocabulary
+  - 终结元 terminal
+  - 非终结元 non-ternimal
+  - 起始符 start symbol
+  - 产生式的有限集 finite set of productions
