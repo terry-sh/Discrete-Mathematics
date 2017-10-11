@@ -15,5 +15,6 @@
   - 性质 property
   - 定理 theorem
   - 论证 argument
+  - 引理 lemma
   - corollary
   - principle

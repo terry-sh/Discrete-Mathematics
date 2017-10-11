@@ -16,3 +16,5 @@
   - Kleene闭包 Kleene closure
   - 正则表达 regular expression
   - 正则语言 regular language
+  - 有限状态自动机 finite state automata (FSA)
+  - Pumping引理 Pumping Lemma
