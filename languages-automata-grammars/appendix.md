@@ -24,3 +24,4 @@
   - 非终结元 non-ternimal
   - 起始符 start symbol
   - 产生式的有限集 finite set of productions
+  - Noam Chomsky分类法
