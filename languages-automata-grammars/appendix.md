@@ -24,4 +24,13 @@
   - 非终结元 non-ternimal
   - 起始符 start symbol
   - 产生式的有限集 finite set of productions
+  - 形式语法的类型 types of grammar
   - Noam Chomsky分类法
+  - Type 0 grammar
+  - Type 1 grammar
+  - Type 2 grammar
+  - Type 3 grammar
+  - 上下文相关语法 context-sensitive grammar
+  - 上下文无关语法 context-free grammar
+  - 正则语法 regular grammar
+  - 上下文无关语法的导出树 derivation trees of context-free grammars
