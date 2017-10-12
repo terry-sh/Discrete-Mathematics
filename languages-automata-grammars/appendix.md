@@ -38,3 +38,6 @@
   - Pushdown自动机 Pushdown Automata
   - 线性有界自动机 Linear Bounded Automata
   - Turing自动机 Turing Machine
+  - 有限状态机 finite state machine
+  - 状态表 State Table
+  - 状态图 State Diagram
