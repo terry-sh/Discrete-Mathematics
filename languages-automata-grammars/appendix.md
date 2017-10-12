@@ -41,3 +41,4 @@
   - 有限状态机 finite state machine
   - 状态表 State Table
   - 状态图 State Diagram
+  - Gödel数 Gödel numbers
