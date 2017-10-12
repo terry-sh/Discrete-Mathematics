@@ -34,3 +34,7 @@
   - 上下文无关语法 context-free grammar
   - 正则语法 regular grammar
   - 上下文无关语法的导出树 derivation trees of context-free grammars
+  - 自动机 automata
+  - Pushdown自动机 Pushdown Automata
+  - 线性有界自动机 Linear Bounded Automata
+  - Turing自动机 Turing Machine
