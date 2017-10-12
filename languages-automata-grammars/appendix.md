@@ -42,3 +42,6 @@
   - 状态表 State Table
   - 状态图 State Diagram
   - Gödel数 Gödel numbers
+  - 表达 expression
+  - 带表达 tape expression
+  - 格局 picture
