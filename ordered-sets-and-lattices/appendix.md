@@ -17,3 +17,9 @@
   - 可比较性 comparability
   - 全序 totally ordered
   - 线性序 linearly ordered
+  - 积集 product set
+  - 积序 product order
+  - 字典序 lexicographical order
+  - Kleene闭包
+  - 字母序 alhabetical order
+  - 长度-字母序 short-lex order
