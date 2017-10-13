@@ -394,3 +394,68 @@ $$
   5. 这里M向左移动，但是，因为 M 正扫描最左面的字母，它必须在左边加上空格符B
 
 **定义13.8** 格局\alpha 是终止的，如果没有格局\beta，使得\alpha \to \beta。
+
+### 用Turing机计算
+
+**定义13.9** Turing机 的一个计算是一列格局 \alpha_0, \alpha_1, ..., \alpha _m，满足 \alpha_{i - 1} \to \alpha_{i} (i = 1, ..., m) 以及 \alpha_m 是终止格局。
+换句话说，一个计算是一个序列：
+$$
+\alpha_0 \to \alpha_1 \to \alpha_2 \to \cdots \alpha_m
+$$
+这个序列不能再延续，因为 a_m 是终止的。我们用 term(\alpha)来表示以 \alpha 开始的计算的最后格局，因此，在上面的计算中，term(\alpha_0) = \alpha_m
+
+### Turing机的输入
+
+**定义13.10** Turing机 M 的一个输入是一个线索表达 W。输入W的初始格局是 \alpha(W)，此处 \alpha(W) = s_0 W。
+
+**定义13.11** 设 M 是一个Turing机，W 是一个输入，如果有一个计算以初始格局 \alpha(W)开始，我们说 M 停止于 W 处。
+也就是，给出一个输入W，我们能形成初始格局 \alpha(W) = s_0 W，并且应用 M 去获得一个序列：
+$$
+\alpha(W) \to \alpha_1 \to \alpha_2 \to cdots
+$$
+两种情况可能发生：
+  1. M 停止在 W 处，也就是说，序列在终止格局 \alpha_r处结束
+  2. M 在 W 处 没有停止，也就是说，序列不会结束
+
+### 形式语法和Turing机
+
+**定理13.7** 形式语言 L 能被 Turing机 M 识别，当且仅当 L 是一个类型 0 的形式语言。
+
+## 可计算的函数
+
+用N来表示正整数的集合，记 N_0：
+$$
+N_0 = \{ 0, 1, 2, 3, \cdots \}
+$$
+
+**定义13.12** 每个数字 n 将通过带表达<n>表示；此处<n> = 1^{n + 1}，这样：
+$$
+\langle 0\rangle = 1, \langle 2\rangle = 111 = 1^3, \langle 4\rangle = 11111 = 1^5
+$$
+
+**定义13.13** 设E是一个表达，那么[E]将用来表示在 E 中1出现的次数，因此：
+$$
+[11B s_2 a_3 111Ba_4] = 5, [a_4 s_2 B a_2] = 0, [\langle n \rangle] = n + 1
+$$
+
+**定义13.14** 函数 f: N_0 \to N_0 是可计算的，如果存在一个 Turing机 M 使得对每个整数 n，M 停止在<n>并且：
+$$
+f(n) = [term(\alpha(\langle n \rangle))]
+$$
+此时，说 M 计算了 f。
+
+**定义13.8** 假设 f: N_0 \to N_0，和 g: N_0 \to N_0 是可计算的，那么复合函数 h = g * f 也是可计算的。
+
+### 多元函数
+
+**定义13.15** 每一个 k 个整数的目录 m = (n_1, n_2, \cdots, n_k) 由带表达<m>表示，这里：
+$$
+\langle m \rangle = \langle n_1 \rangle B \langle n_2 \rangle B \cdots B \langle n_k \rangle
+$$
+（因此， <(2,0,4)> = 111B1B11111 = 1^3 B 1^1 B 1^5）
+
+**定义13.16** 一个k元函数f(n_1, n_2, \cdots, n_k) 是可计算的，如果存在一个Turing机M，使得对每一个目录 m = (n_1, n_2, ..., n_k)，M 停止在 <m> 处，并且：
+$$
+f(m) = [term(\alpha(\langle m \rangle))]
+$$
+那么我们说 M 可计算 f。

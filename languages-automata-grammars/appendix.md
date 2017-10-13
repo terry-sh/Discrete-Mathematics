@@ -45,3 +45,5 @@
   - 表达 expression
   - 带表达 tape expression
   - 格局 picture
+  - 终结 terminal
+  - 可计算的 computable
