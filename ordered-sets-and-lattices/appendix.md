@@ -9,3 +9,6 @@
   - 偏序集 partially ordered set
   - 有序集 ordered set, poset
   - 常序 usual order
+  - 对偶序 dual order
+  - 诱导序 induced order
+  - 有序子集 ordered subsets

@@ -44,3 +44,14 @@ $$
 $$
 \precsim, \prec, \succ, \succsim
 $$
+
+### 对偶序
+
+设 \precsim 为集合 S 的任何偏序，关系 \succsim，即 a 后于 b，也是 S 的偏序，叫做对偶序。
+显然， a\precsim b 当且仅当 b\succsim a；因此对偶序\precsim 是 \succsim 的逆，即\precsim = \succsim^{-1}。
+
+### 有序子集
+
+设 A 为有限集 S 的一个子集，假设 a, b \in A。在 A 中定义 a\precsim b 当且仅当在 S 中有 a\precsim b。
+A 的这个偏序叫 A 上的**诱导序**，带有诱导序的子集 A 被称为 S 的**有序子集**。
+除非特殊说明，序集 S 的任何子集被认为是 S 的有序子集。
