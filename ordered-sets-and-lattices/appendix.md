@@ -23,3 +23,7 @@
   - Kleene闭包
   - 字母序 alhabetical order
   - 长度-字母序 short-lex order
+  - 直接前元 immediate predecessor
+  - 直接继承 immediate successor
+  - 盖住 cover
+  - Hasse图 Hasse diagram
