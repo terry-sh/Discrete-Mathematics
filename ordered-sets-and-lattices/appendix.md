@@ -27,3 +27,7 @@
   - 直接继承 immediate successor
   - 盖住 cover
   - Hasse图 Hasse diagram
+  - 极大元素 minimal
+  - 极小元素 maximal
+  - 最小元素 first element
+  - 最大元素 last element
