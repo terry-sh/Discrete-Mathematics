@@ -31,3 +31,13 @@
   - 极小元素 maximal
   - 最小元素 first element
   - 最大元素 last element
+  - 相容编号 consistent enumeration
+  - 上界 upper bound
+  - 上确界 supremum
+  - 下界 lower bound
+  - 下确界 infimum
+  - 最小上界 least upper bound
+  - 最大下界 greatest lower bound
+  - 上有界 bounded above
+  - 下有界 bounded below
+  - 有界 bounded
