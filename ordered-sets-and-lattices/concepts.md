@@ -245,3 +245,61 @@ $$
 **选择公理** 任何一个非空集合的非空集簇都存在一个选择函数。
 
 **良序定理** 每一个集合 S 都能成为良序集。
+
+## 格
+
+设 L 是对二元运算交 \land 和并 \lor 封闭的集合，如果对 L 中的任意元素a，b，c有：
+  1. 交换律：
+    $$
+    a \land b = b \land a, a \lor b = b \lor a
+    $$
+  2. 结合律：
+    $$
+    (a \land b)\land c = a \land (b \land c), (a \lor b)\lor c = a \lor (b \lor c)
+    $$
+  3. 吸收律：
+    $$
+    a \land (a\lor b) = a, a\lor (a \land b) = a
+    $$
+
+称 L 为格。记 (L, \land, \lor) 表示格 L。
+
+### 对偶律 和 幂等律
+
+对偶：一个格 (L, \land, \lor) 中任何一个命题的对偶命题是通过互换 \land 和 \lor 得到的。
+
+**对偶原理** 格 中任何一个定理的 对偶 还是 格 的一个定理。
+
+**幂等律** 1. a \land a = a 2. a \lor a = a
+
+格 L 上的关系定义：
+$$
+a\land b = a \implies a \precsim b
+$$
+
+$$
+a\lor b = b \implies a \precsim b
+$$
+
+**定理14.4** 设 L 是一个格，那么：
+  1. a \land b = a 当且仅当 a\lor b = b；
+  2. 关系 a \precsim b 是L的一个偏序；
+
+**定理14.5** 设 P 是一个偏序集使得对于任意a，b \in P，inf(a, b) 和 sup(a, b) 都存在，设 a\land b = inf(a, b), a\lor b = sup(a, b)。则 (P, \land,\ lor) 是一个格。进一步的，这个 格 推导出的偏序 与 原来的偏序 P 相同。
+
+**替换定义** 一个格是一个偏序集，在这个集合中，对任何一对元素 a 和 b：
+$$
+a \land b = inf(a, b) 和 a \lor b = sup(a, b)
+$$
+都存在。
+
+### 子格，同构格
+
+假设 M 是格 L 的一个非空子集，
+
+子格：若 M 本身也是一个格（关于 L 的运算），则 M 称为子格。
+
+同构格：两个格 L 和 L' 被认为是同构的，如果存在一个双射 f: L \to L'，使得对 L 中的任何元素a，b满足：
+$$
+f(a\land b) = f(a)\land f(b), f(a\lor b) = f(a) \lor f(b)
+$$
