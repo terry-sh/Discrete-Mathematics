@@ -56,3 +56,6 @@
   - 幂等律 Idempotent law
   - 子格 sublattice
   - 同构格 isomorphic lattice
+  - 分配格 distributive lattice
+  - 并不可约元素 irreducible element
+  - 原子 atom
