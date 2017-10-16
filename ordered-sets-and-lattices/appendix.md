@@ -41,3 +41,5 @@
   - 上有界 bounded above
   - 下有界 bounded below
   - 有界 bounded
+  - 相似映射 similarity mapping
+  - 同构 isomorphic, similar
