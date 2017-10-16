@@ -43,3 +43,7 @@
   - 有界 bounded
   - 相似映射 similarity mapping
   - 同构 isomorphic, similar
+  - 超限归纳法 transfinite induction
+  - 选择函数 choice function
+  - 选择公理 Axiom of Choice
+  - 良序定理 Well-Ordering Theorem
