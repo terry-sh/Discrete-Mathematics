@@ -59,3 +59,5 @@
   - 分配格 distributive lattice
   - 并不可约元素 irreducible element
   - 原子 atom
+  - 补元 complement
+  - 有补格 complemented lattice
