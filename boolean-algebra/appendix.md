@@ -20,3 +20,4 @@
   - 对合律 involution laws
   - DeMorgan律 DeMorgan's laws
   - 布尔代数的替换定义 alternate definition
+  - 表示定理 representation theorem
