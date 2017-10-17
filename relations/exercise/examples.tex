@@ -1,4 +1,33 @@
-1. Use Kuratowski's definition to prove that:
+\documentclass{article}
+\begin{document}
+
+1. Based on Kuratowski's definition of ordered pairs, prove that:
 $$
 (a, b) = (c, d) \iff (a = b \land c = d)
 $$
+
+According to Kuratowski's definition, $(x, y) = {{x}, {x, y}}$.
+
+If $(a, b) = (c, d)$, then ${{a}, {a, b}} = {{c}, {c, d}}$
+
+  1. if $a = b$,
+     then ${{a}, {a, b}} = {{a}, {a, a}} = {{a}} = {{c}, {c, d}}$,
+     then ${c} = {c, d} = {a}$,
+     then $a = c = d$,
+     then $b = a = d$
+     then $a = c, b = d$
+
+  2. if $a \neq b$
+     a. if ${a} = {c, d}$,
+        then $a = c = d$, ${{c}, {c, d}} = {{a}}$,
+        then ${{a}, {a, b}} = {{a}}$,
+        then $a = b$,
+        which contradicts $a \neq b$.
+     b. the same goes for ${c} = {a, b}$
+     c. if ${a} = {c}$,
+        then $a = c$,
+        then ${{a}, {a, b}} = {{c}, {c, d}} = {{a}, {a, d}}$,
+        then ${a, b} = {a, d}$,
+        then $b = d$.
+
+\end{document}

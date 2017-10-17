@@ -14,23 +14,23 @@
   - n元组 n-tuple
   - 二元关系 binary relation
   - n元关系 n-ary relation
-  - 逆关系
+  - 逆关系 inreverse relation
 
-  - 关系的图示
-    * 关系矩阵
-    * 关系箭头图
+  - 关系的图示 pictorial representation of relations
+    * 关系矩阵 matrix of the relation
+    * 关系箭头图 arrow diagram of the relation
     * 关系有向图
-  - 关系的合成
+  - 关系的合成 composition of relations
 
-  - 典型关系
-    * 自反关系
-    * 空关系
-    * 全关系
-    * 对称关系
-    * 反对称关系
-    * 传递关系
+  - 典型关系 types of relations
+    * 自反关系 reflexive relations
+    * 空关系 the empty relation
+    * 全关系 the universal relation
+    * 对称关系 symmetric relations
+    * 反对称关系 antisymmentric relations
+    * 传递关系 transitive relations
 
-  - 闭包性质
+  - 闭包性质 closure properties
     * 自反闭包
     * 对称闭包
     * 对角线
