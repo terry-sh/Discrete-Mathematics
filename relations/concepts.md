@@ -2,7 +2,41 @@
 
 关系由元素的有序偶(a, b)来定义，这里a作为第一元素，b为第二元素。
 
-特别地，(a, b) = (c, d) 当且仅当a = c 且 b = d。
+特别地，(a, b) = (c, d) 当且仅当 a = c 且 b = d。
+
+### 使用集合定义有序偶
+
+- Wiener's
+$$
+(a, b) := {{{a}, \emptyset}, {{b}}}
+$$
+
+- Hausdorff
+$$
+(a, b) := {{a, 1}, {b, 2}}
+$$
+（注：此处的 1 和 2 不是数字 1 和 2，而是代表与 a 和 b 不相等的两个互不相等的元素）
+
+- Kuratowski 定义
+$$
+(a, b) = {{a}, {a, b}}
+$$
+
+有序偶第一元素的定义：
+$$
+\forall Y \in p : x \in Y
+$$
+
+有序偶第二元素的定义：
+$$
+(\exist Y \in p : x \in Y) \land (\forall Y_1, Y_2 \in p : Y_1 \neq Y_2 \rarrow (x \not\in Y_1 \lor x \not\in Y_2))
+$$
+
+- Cantor-Frege 定义
+(a, b) := { R: aRb }
+（使用关系来定义）
+
+此外，还有多种其它定义形式，此处不再介绍。
 
 ## 集合的积（笛卡尔积）
 
@@ -12,6 +46,11 @@ A，B的积记作 A × B。
 A × B = {(a, b): a ∈ A 且 b ∈ B}
 
 A × A 通常也记作 A^2。
+
+笛卡尔积有以下性质：
+  1. A \neq B \implies A\times B \neq B \times A,
+     A\times B = B\times a \iff A = B
+  2. n(A\times B) = n(B\times A) = n(A) n(B)
 
 ### 笛卡尔平面
 

@@ -2,14 +2,18 @@
 
 ## 术语
 
-  - 有序偶
-    * 有序偶的第一元素
-    * 有序偶的第二元素
-  - 集合的积
-  - 集合的笛卡尔积
-  - 关系
-    * 关系的定义域
-    * 关系的值域
+  - 有序偶 ordered pair
+    * 有序偶的第一元素 first entry
+    * 有序偶的第二元素 second entry
+  - 集合的积 product of set
+  - 集合的笛卡尔积 Cartesian product of set
+  - 关系 relation
+    * 关系的定义域 domain of a relation
+    * 关系的值域 range of a relation
+  - 二元组 2-tuple
+  - n元组 n-tuple
+  - 二元关系 binary relation
+  - n元关系 n-ary relation
   - 逆关系
 
   - 关系的图示
