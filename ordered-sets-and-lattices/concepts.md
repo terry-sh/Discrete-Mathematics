@@ -253,14 +253,17 @@ $$
     $$
     a \land b = b \land a, a \lor b = b \lor a
     $$
+
   2. 结合律：
     $$
     (a \land b)\land c = a \land (b \land c), (a \lor b)\lor c = a \lor (b \lor c)
     $$
+
   3. 吸收律：
     $$
     a \land (a\lor b) = a, a\lor (a \land b) = a
     $$
+
 
 称 L 为格。记 (L, \land, \lor) 表示格 L。
 
@@ -282,8 +285,8 @@ a\lor b = b \implies a \precsim b
 $$
 
 **定理14.4** 设 L 是一个格，那么：
-  1. a \land b = a 当且仅当 a\lor b = b；
-  2. 关系 a \precsim b 是L的一个偏序；
+    1. a \land b = a 当且仅当 a\lor b = b；
+    2. 关系 a \precsim b 是L的一个偏序；
 
 **定理14.5** 设 P 是一个偏序集使得对于任意a，b \in P，inf(a, b) 和 sup(a, b) 都存在，设 a\land b = inf(a, b), a\lor b = sup(a, b)。则 (P, \land,\ lor) 是一个格。进一步的，这个 格 推导出的偏序 与 原来的偏序 P 相同。
 
@@ -347,7 +350,7 @@ a   /
    l
  / | \
 a  b  c
-\  |  /
+ \ | /
    0
 
 ### 并不可约元素，原子
