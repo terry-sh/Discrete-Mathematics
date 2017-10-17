@@ -11,3 +11,4 @@
   - 单位元素 unit element
   - 子代数 subalgebras
   - 同构的布尔代数 isomorphic Boolean Algebra
+  - 对偶性 duality
