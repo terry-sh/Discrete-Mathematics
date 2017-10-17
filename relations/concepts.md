@@ -48,9 +48,30 @@ A × B = {(a, b): a ∈ A 且 b ∈ B}
 A × A 通常也记作 A^2。
 
 笛卡尔积有以下性质：
-  1. A \neq B \implies A\times B \neq B \times A,
-     A\times B = B\times a \iff A = B
-  2. n(A\times B) = n(B\times A) = n(A) n(B)
+  1. not commutative:
+     A != B -> A × B != B × A
+     A × B = B × A <--> A = B
+
+  2. n(A × B) = n(B × A) = n(A) n(B)
+
+  3. not associative:
+     (A × B) × C != A × (B × C)
+
+  4. A × (B ∩ C) = (A × B) ∩ (A × C)
+     A × (B ∪ C) = (A × B) ∪ (A × C)
+     A × (B \ C) = (A × B) \ (A × C)
+     (A × C)^C = (A^C × B^C) ∪ (A^C × B)  ∪ (A × B^C)
+
+  5. (A ∩ B) × (C  ∩ D) = (A × C) ∩ (B × D)
+
+     (A ∪ B) × (C ∪ D) \neq (A × C) ∪ (B × D)
+
+     (A ∪ B) × (C ∪ D) = [(A \ B)  × C] ∪ [(A ∩ B) × (C ∪ D)]  ∪ [(B \ A)  × D]
+
+     (A × C) \ (B × D) = [A ×(C \ D)] ∪ [(A \ B) × C]
+
+  6. A ⊆ B -> A × C ⊆ B × C
+     A, B != ∅ -> (A × B ⊆ C × D <--> A ⊆ C \land B ⊆ D)
 
 ### 笛卡尔平面
 
