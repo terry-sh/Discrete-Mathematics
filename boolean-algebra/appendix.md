@@ -12,3 +12,10 @@
   - 子代数 subalgebras
   - 同构的布尔代数 isomorphic Boolean Algebra
   - 对偶性 duality
+  - 幂等律 idempotent laws
+  - 有界律 boundedness laws
+  - 吸收律 absorption laws
+  - 结合律 associative laws
+  - 补的唯一性 uniqueness of complement
+  - 对合律 involution laws
+  - DeMorgan律 DeMorgan's laws
