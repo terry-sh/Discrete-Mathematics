@@ -1,0 +1,29 @@
+\documentclass[a4paper, 12pt]{article}
+\usepackage{color}
+
+\title{Exercise}
+\begin{document}
+
+\begin{enumerate}
+  \item Prove: Let $A, B, C, D$ be sets. Suppose $R$ is a relation from $A$ to $B$,
+  $S$ is a relation from $B$ to $C$ and $T$ is a relation from $C$ to $D$.
+  Then $(R\circ S)\circ T = R\circ (S\circ T)$
+  \item Suppse $C$ is a collection of relations $S$ on a set $A$,
+  and let $T$ be the intersection of the relations $S$ in $C$, that is $T = \cap(S|S \in C)$.
+  Prove:
+  a. If every S is symmetric, then T is symmetric.
+  b. If every S is transitive, then T is transitive.
+  \item let $R$ be a relation on a set $A$, and let $P$ be a property of relations,
+  such as symmetry and transitivity. Then $P$ will be called \texsl{R-closable} if $P$ satisfies:
+  i. There is a \textsl{P}-relation S containing $R$.
+  ii. The intersection of \textsl{P}-relations is a \textsl{P}-relation.
+  a. Show that symmetry and transitivity are \texsl{R-closable} for any relation $R$.
+  b. Suppose $P$ is \texsl{R-closable}. Then $P(R)$, the \texsl{P-closure} of $R$,
+  is the intersection of all \texsl{P}-relations $S$ containing $R$, that is:
+  $$
+  P(R) = \cap(S | \textrm{S is a P-relation and } R \subseteq S)
+  $$
+
+\end{enumerate}
+
+\end{document}

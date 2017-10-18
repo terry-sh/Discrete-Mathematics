@@ -14,7 +14,7 @@
   - n元组 n-tuple
   - 二元关系 binary relation
   - n元关系 n-ary relation
-  - 逆关系 inreverse relation
+  - 逆关系 inverse relation
 
   - 关系的图示 pictorial representation of relations
     * 关系矩阵 matrix of the relation
