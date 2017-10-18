@@ -39,6 +39,9 @@ A\B = {x: x ∈ A, x ∉ B}。
 
 ## 集合的基本积<a href='#fundamental-products'></a>
 
+对于 n 个不同的集合 A1, A2, ..., An, 它们的基本积是以下形式的任一集合：
+A1* \cap A2* \cap ... \cap An* (Ai* = A 或 Ai* = A^c)
+
 ## 对称差
 
 集合A和B的对称差，记作

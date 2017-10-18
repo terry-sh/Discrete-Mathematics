@@ -1,1 +1,30 @@
-# 习题
+\documentclass{article}
+  \usepackage{amsmath}
+  \usepackage{amssymb}
+  \newcommand{\setcomp}[1] {{#1}^{\mathsf{c}}}
+
+\begin{document}
+
+\begin{enumerate}
+  \item Prove $B\setminus A = B\cap \setcomp{A}$.
+  \item Prove the following are equivalent:
+  $A\subseteq B, A \cap B = A, A\cup B = B$.
+
+  \item Prove the Distributive Law:
+  $A\cap(B\cap C) = (A\cap B)\cup (A\cap C)$.
+
+  \item Write the dual of:
+  $
+  (\textbf{U} \cap A)\cup (B\cap A) = A,
+  (A\cap \textbf{U})\cap (\emptyset \cup \setcomp{A}) = \emptyset
+  $.
+
+  \item Prove $(A\cup B)\setminus (A\cap B) = (A\setminus B)\cup (B\setminus A)$.
+
+  \item Prove $n(P(S)) = 2^{n(S)}$.
+
+  \item Try to figure out the formula for: $n(partition(S))$.
+
+\end{enumerate}
+
+\end{document}
