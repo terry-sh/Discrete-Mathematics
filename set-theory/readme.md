@@ -7,3 +7,8 @@
   - [习题](exercise.md)
   - [附录](appendix.md)
   - [记号](notations.md)
+
+## 难点
+  - 集簇
+  - 幂集
+  - 划分

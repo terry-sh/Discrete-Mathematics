@@ -39,4 +39,5 @@
   - 集族 classes of sets
   - 幂集 power set
   - 集合的划分 set partitions
+    * 胞腔 cell
   - 数学归纳法 mathematical induction
