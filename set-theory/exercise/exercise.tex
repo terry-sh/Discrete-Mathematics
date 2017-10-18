@@ -21,9 +21,39 @@
 
   \item Prove $(A\cup B)\setminus (A\cap B) = (A\setminus B)\cup (B\setminus A)$.
 
-  \item Prove $n(P(S)) = 2^{n(S)}$.
+  \item Prove:
+
+    a. $(A\cap B)\cup (A\cap \setcomp{B}) = A$
+
+    b. $A\cup B = (A\cap \setcomp{B})\cup (\setcomp{A}\cap B)\cup (A\cap B)$
+
+  \item Prove $n(P(S)) = 2^{n(S)}$ if $S$ is a finite set.
 
   \item Try to figure out the formula for: $n(partition(S))$.
+
+  \item Let $[A_1, A_2, \cdots, A_m]$ and $[B_1, B_2, \cdots, B_m]$ be partitions of a set S.
+  Prove the following collection is also a partition (called the \textsl{cross partition}) of S:
+  $$
+  P = [A_i\cap B_j | i = 1, \cdots, m, j = 1, \cdots, n]\setminus \emptyset
+  $$
+
+  \item Prove the following properties of the symmetric difference:
+
+    a. Associative Law $(A\oplus B)\oplus C = A\oplus(B \oplus C)$
+
+    b. Comutative Law $A\oplus B = B\oplus A$
+
+    c. Cancellation Law $A\oplus B = A\oplus C \implies B = C$
+
+    d. Distributive Law $A\cap (B\oplus C) = (A\cap B)\oplus (A\cap C)$
+
+  \item Consider $m$ nonempty distinct sets, $A_1, A_2, \cdots, A_m$ in a universal set $\textbf{U}$. Prove:
+
+    a. There are $2^m$ fundamental products of the $m$ sets.
+
+    b. Any two fundamental products are disjoint.
+
+    c. $\textbf{U}$ is the union of all the fundamental products.
 
 \end{enumerate}
 
