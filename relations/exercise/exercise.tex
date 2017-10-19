@@ -8,11 +8,13 @@
   \item Prove: Let $A, B, C, D$ be sets. Suppose $R$ is a relation from $A$ to $B$,
   $S$ is a relation from $B$ to $C$ and $T$ is a relation from $C$ to $D$.
   Then $(R\circ S)\circ T = R\circ (S\circ T)$
+
   \item Suppse $C$ is a collection of relations $S$ on a set $A$,
   and let $T$ be the intersection of the relations $S$ in $C$, that is $T = \cap(S|S \in C)$.
   Prove:
   a. If every S is symmetric, then T is symmetric.
   b. If every S is transitive, then T is transitive.
+
   \item let $R$ be a relation on a set $A$, and let $P$ be a property of relations,
   such as symmetry and transitivity. Then $P$ will be called \texsl{R-closable} if $P$ satisfies:
   i. There is a \textsl{P}-relation S containing $R$.
@@ -23,6 +25,33 @@
   $$
   P(R) = \cap(S | \textrm{S is a P-relation and } R \subseteq S)
   $$
+
+  \item Consider the \textbf{Z} of integers and an integer $m > 1$.
+  We say that $x$ is congruent to $y$ modulo $m$, written
+  $$
+  x \equiv y (mod m)
+  $$
+  if $x - y$ is divisible by $m$. Show that this defines an equivalence relation on \textbf{Z}.
+
+  \item Let A be a set of nonzero integers and let $\sim$ be the relation on $A\tims A$ defined by
+  $$
+  (a, b) \sim (c, d) \textrm{whenever} ad = bc
+  $$
+  Prove that $\sim$ is an equivalence relation.
+
+  \item Prove: Let $R$ be an equivalence relation in a set $A$. Then the quotient set $A/R$ is a partition of A.
+  Specifically,
+  i.   $\forall a \in A \to a\in [a]$
+  ii.  $[a] = [b] \iff (a, b) \in R$
+  iii. $[a] \neq [b] \to [a]\cap [b] = \emptyset$
+
+  \item Prove: Let $\textsc{l}$ be any collection of sets,
+  the relation of set inclusion $\subseteq$ a partial order on $\textsc{l}$.
+
+  \item Suppose $R$ and $S$ are relations on a set $A$, and $R$ is antisymmetric.
+  Prove that $R\cap S$ is antisymmetric.
+
+  \item Prove that if $R$ is an equivalence relation on set $A$, the $R^{-1}$ is also an equivalence relation on $A$.
 
 \end{enumerate}
 
