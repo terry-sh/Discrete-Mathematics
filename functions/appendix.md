@@ -2,26 +2,33 @@
 
 ## 术语
 
-  - 函数
-    * 定义域
-    * 上域
-    * 值域
-    * 像
-    * 变量
-    * 自变量
-    * 因变量
-  - 函数的图
-  - 复合函数
-  - 一一
-  - 映上
-  - 单射
-  - 满射
-  - 双射
-  - 可逆
-  - 数学函数
-  - 上、下取整函数
-  - 指数函数
-  - 对数函数
+  - 函数 function
+    * 定义域 domain
+    * 上域 codomain, target set
+    * 值域 range
+    * 像 image
+    * 变量 variable
+    * 自变量 independent variable
+    * 因变量 dependent variable
+  - 函数的图 graph of function
+  - 复合函数 composition function
+  - 一一 one-to-one
+  - 单射 injective
+  - 映上 onto
+  - 满射 surjective
+  - 可逆 invertible
+  - 一一对应 one-to-one correspondence
+  - 双射 bijectice
+  - 置换 permutation
+  - 恒等函数 identity function
+  - 数学函数 mathematical function
+    * 上、下取整函数 floor and ceiling function
+    * 实数转整数函数 interger function
+    * 绝对值函数 absolute value function
+    * 取余函数 remainder function
+    * 同余函数 modular arithmetic
+    * 指数函数 exponential function
+    * 对数函数 logarithmic function
   - 求和
   - 求和记号
   - 哑变量
