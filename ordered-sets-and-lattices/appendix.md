@@ -48,16 +48,16 @@
   - 选择公理 Axiom of Choice
   - 良序定理 Well-Ordering Theorem
   - 格 lattice
-  - 交换律 Commutation law
-  - 结合律 Associative law
-  - 吸收律 Absorption law
-  - 对偶 dual
-  - 对偶律 Dulaity law
-  - 幂等律 Idempotent law
-  - 子格 sublattice
-  - 同构格 isomorphic lattice
-  - 分配格 distributive lattice
-  - 并不可约元素 irreducible element
-  - 原子 atom
-  - 补元 complement
-  - 有补格 complemented lattice
+    * 交换律 Commutation law
+    * 结合律 Associative law
+    * 吸收律 Absorption law
+    * 对偶 dual
+    * 对偶律 Dulaity law
+    * 幂等律 Idempotent law
+    * 子格 sublattice
+    * 同构格 isomorphic lattice
+    * 分配格 distributive lattice
+    * 并不可约元素 irreducible element
+    * 原子 atom
+    * 补元 complement
+    * 有补格 complemented lattice
