@@ -21,7 +21,7 @@
   - 积序 product order
   - 字典序 lexicographical order
   - Kleene闭包
-  - 字母序 alhabetical order
+  - 字母序 alphabetical order
   - 长度-字母序 short-lex order
   - 直接前元 immediate predecessor
   - 直接继承 immediate successor
