@@ -13,3 +13,10 @@
   - 消去律 cancellation law
   - 左消去律 left cancellation law
   - 右消去律 right cancellation law
+  - 半群 semigroup
+  - 幺半群 monoid
+  - 自由半群 free semigroup
+  - 生成元 generator
+  - 自由幺半群 free monoid
+  - 子半群 subsemigroup
+  - （运算）封闭 closed
