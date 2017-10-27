@@ -22,3 +22,7 @@
   - （运算）封闭 closed
   - 同余关系 congruence relation
   - 商群 quotient
+  - 半群同态 semigroup homomorphism
+  - 同构 isomorphism
+  - 同构半群 isomorphic semigroup
+  - 半群的积 semigroup products
