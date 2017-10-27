@@ -20,3 +20,5 @@
   - 自由幺半群 free monoid
   - 子半群 subsemigroup
   - （运算）封闭 closed
+  - 同余关系 congruence relation
+  - 商群 quotient
