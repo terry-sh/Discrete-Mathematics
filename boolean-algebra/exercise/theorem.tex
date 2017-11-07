@@ -1,0 +1,22 @@
+\documentclass{article}
+  \usepackage{amsmath}
+  \usepackage{amssymb}
+  \newcommand{\setcomp}[1] {{#1}^{\mathsf{c}}}
+
+\begin{document}
+
+Idempotent laws: 1. $x + x = x$; 2. $x \cdot x = 0$.
+
+Proof 1:
+
+\begin{eqnarray*}
+x + x & = & (x + x)\cdot 1 \\
+& = & (x + x)\cdot (x + x') \\
+& = & x + (x \cdot x') \\
+& = & x + 0 \\
+& = & x
+\end{eqnarray*}
+
+Key: $x + (x \cdot x') = (x + x) \cdot (x + x')$
+
+\end{document}
