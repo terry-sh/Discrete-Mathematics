@@ -1,0 +1,32 @@
+\documentclass{article}
+  \usepackage{amsmath}
+  \usepackage{amssymb}
+  \newcommand{\setcomp}[1] {{#1}^{\mathsf{c}}}
+
+\begin{document}
+
+Idempotent laws: 1. $x + x = x$; 2. $x * x = 0$.
+
+Proof 1:
+
+\begin{eqnarray*}
+x + x & = & (x + x) * 1 \\
+& = & (x + x) * (x + x') \\
+& = & x + (x * x') \\
+& = & x + 0 \\
+& = & x
+\end{eqnarray*}
+
+Key: $x + (x * x') = (x + x) * (x + x')$
+
+Proof 2:
+
+\begin{eqnarray*}
+x * x & = & (x * x) + 0 \\
+& = & (x * x) + (x * x') \\
+& = & x * (x + x') \\
+& = & x * 1 \\
+& = & x
+\end{eqnarray*}
+
+\end{document}
