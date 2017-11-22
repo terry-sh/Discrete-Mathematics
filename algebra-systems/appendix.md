@@ -26,3 +26,11 @@
   - 同构 isomorphism
   - 同构半群 isomorphic semigroup
   - 半群的积 semigroup products
+  - 群 group
+  - 阿贝尔群 abelian group (commutative group)
+  - 乘法式 multiplicatively
+  - 加法式 additively
+  - 有限群 finite group
+  - 子群 subgroup
+  - 正规子群 normal subgroup
+  - 同态 homomorphism
