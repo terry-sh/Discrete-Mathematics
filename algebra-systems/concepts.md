@@ -38,7 +38,11 @@ $$
 $$
 a * e = e * a = a
 $$
-被称为 * 的单位元，
+被称为 * 的单位元。
+
+$$
+\exist e in S \implies \forall a in S \to a * e = e * a = a
+$$
 
 更一般的，对于 S 中的任意元素a，如果 e * a = a，则 e 称为左单位元；如果 a * e = a，则 e 称为右单位元。
 
