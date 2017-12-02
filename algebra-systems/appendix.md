@@ -34,3 +34,4 @@
   - 子群 subgroup
   - 正规子群 normal subgroup
   - 同态 homomorphism
+  - 商群 quotient group
