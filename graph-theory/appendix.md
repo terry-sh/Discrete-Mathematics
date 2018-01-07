@@ -29,10 +29,11 @@
   - 同构图 isomorphic graph
   - 同胚图 homeomorphic graph
   - 路 path
+  - 闭 close
   - 路的长度 length of path
   - 闭路 cycle
   - 简单路 simple path
-  - 迹
+  - 迹 trail
   - 连通度 connectivity
   - 连通分支 connected component
   - 距离 distance
@@ -40,22 +41,27 @@
   - 割点 cut point
   - 桥 bridge
   - Konigsberg 桥
-  - 可旅行多重图
-  - 标号图
-  - 赋权图
-  - 完全图
-  - 正则图
-  - 二部图
-  - 支撑树
-  - 最小支撑树
-  - 平面图
-  - 地图
-  - 区域
-  - 应用图
-  - 星图
-  - 着色
-  - 四色定理
-  - 对偶地图
+  - 可旅行 traversable
+  - 可旅行迹 traversable trail
+  - 可旅行多重图 traversable multigraph
+  - Hamilton图 Hamiltonian graph
+  - 标号图 labeled graph
+  - 赋权图 weighed graph
+  - 完全图 complete graph
+  - 正则图 regular graph
+  - 二部图 bipartite graph
+  - 树 tree
+  - 支撑树 spanning tree
+  - 最小支撑树 minimum spanning tree
+  - 平面图 planar graph
+  - 地图 map
+  - 区域 region
+  - 非平面图 nonplanar graph
+  - 应用图 utility graph
+  - 星图 star graph
+  - 着色 graph colorings
+  - 四色定理 Four Color Theorem
+  - 对偶地图 dual maps
   - 邻接矩阵
   - 邻接结构
   - 广度优先搜索
