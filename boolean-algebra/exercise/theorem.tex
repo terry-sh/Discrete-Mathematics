@@ -1,89 +1,117 @@
 \documentclass{article}
   \usepackage{amsmath}
   \usepackage{amssymb}
+  \usepackage{amsthm}
+  \newtheorem{theorem}{Theorem}[section]
   \newcommand{\setcomp}[1] {{#1}^{\mathsf{c}}}
 
 \begin{document}
 
 \title{Prove for theorems of axiomatic boolean algebra}
 
-Prove idempotent laws:
- \begin{equation}
- x + x = x
- \end{equation}
+\begin{theorem}[Idempotent laws]
+\label{idempotent}
+\[ x + x = x \]
+\[ x * x = x \]
+\end{theorem}
 
- \begin{equation}
- x * x = x
- \end{equation}
+\begin{proof}
+\begin{align*}
+x + x & = (x + x) * 1 \\
+      & = (x + x) * (x + x') \longleftarrow \text{distributive laws} \\
+      & = x + (x * x') \\
+      & = x + 0 \\
+      & = x
+\end{align*}
+\end{proof}
 
-Proof $x + x = x$:
-\begin{eqnarray*}
-x + x & = & (x + x) * 1 \\
-      & = & (x + x) * (x + x') \longleftarrow \text{apply distributive laws} \\
-      & = & x + (x * x') \\
-      & = & x + 0 \\
-      & = & x
-\end{eqnarray*}
+\begin{proof}
+\begin{align*}
+x * x & = (x * x) + 0 \\
+      & = (x * x) + (x * x') \longleftarrow \text{distributive laws} \\
+      & = x * (x + x') \\
+      & = x * 1 \\
+      & = x
+\end{align*}
+\end{proof}
 
-Key point: $x + (x * x') = (x + x) * (x + x') \implies (x + x) * (x + x') = x + (x * x')$
+Absorption Laws:
+\begin{equation}
+x + (x * y) = x
+\end{equation}
 
-Proof $x * x = x$:
-\begin{eqnarray*}
-x * x & = & (x * x) + 0 \\
-      & = & (x * x) + (x * x') \\
-      & = & x * (x + x') \\
-      & = & x * 1 \\
-      & = & x
-\end{eqnarray*}
+\begin{equation}
+x * (x + y) = x
+\end{equation}
 
-Absorption Laws: 1. $x + (x * y) = x$ 2. $x * (x + y) = x$
+\begin{proof}
+\begin{align*}
+x + (x * y) & = (x * 1) + (x * y)  \longleftarrow \text{distributive laws} \\
+            & = x * (1 + y) \\
+            & = x * 1 \\
+            & = x
+\end{align*}
+\end{proof}
 
-\begin{eqnarray*}
-x + (x * y) & = & (x * 1) + (x * y) \\
-            & = & x * (1 + y) \\
-            & = & x * 1 \\
-            & = & x \\
-\end{eqnarray*}
+\begin{proof}
+\begin{align*}
+x * (x + y) & = x * x + x * y \longleftarrow \text{distributive laws} \\
+            & = x + (x * y) \\
+            & = x
+\end{align*}
+\end{proof}
 
-\begin{eqnarray*}
-x * (x + y) & = & x * x + x * y \\
-            & = & x + (x * y) \\
-            & = & x \\
-\end{eqnarray*}
+Associative Laws:
+\begin{equation}
+x + (y + z) = (x + y) + z
+\end{equation}
+\begin{equation}
+(x * y) * z = x * (y * z)
+\end{equation}
 
-
-Associative Laws: 1. x + (y + z) = (x + y) + z 2. (x * y) * z = x * (y * z)
-
+\begin{proof}
 let $A = [x + (y + z)] * [(x + y) + z]$, then:
-\begin{eqnarray*}
-A & = & [(x + y) + z] * [x + (y + z)] \\
-  & = & [(x + y) + z] * x + [(x + y) + z] * (y + z) \\
-  & = & [(x + y) * x + x * z] + \{[(x + y) + z] * y + [(x + y) + z] * z\} \\
-  & = & [x + x * z] + \{[(x + y) * y + z * y] + z\} \\
-  & = & x + \{(y + z * y) + z\} \\
-  & = & x + (y + z) \\
-\end{eqnarray*}
+\begin{align*}
+A & = [(x + y) + z] * [x + (y + z)] \\
+  & = [(x + y) + z] * x + [(x + y) + z] * (y + z) \\
+  & = [(x + y) * x + x * z] + \{[(x + y) + z] * y + [(x + y) + z] * z\} \\
+  & = [x + x * z] + \{[(x + y) * y + z * y] + z\} \\
+  & = x + \{(y + z * y) + z\} \\
+  & = x + (y + z)
+\end{align*}
 but also:
-\begin{eqnarray*}
-A & = & [x + (y + z)] * [(x + y) + z] \\
-  & = & [x + (y + z)] * (x + y) + [x + (y + z)] * z \\
-  & = & \{[x + (y + z)] * x + [x + (y + z)] * y\} + [x * z + (y + z) * z]\\
-  & = & \{x + [x * y + (y + z) * y]\} + (x * z + z)\\
-  & = & [x + (x * y + y)] + z\\
-  & = & (x + y) + z \\
-\end{eqnarray*}
-so: $A = x + (y + z) = (x + y) + z$.
 
-Boundedness Laws: 1. x + 1 = 1, x * 0 = 0
-Proof $x + 1 = 1$:
-\begin{eqnarray*}
-x + 1 & = & (x + 1) * 1 \\
-      & = & (x + 1) * (x + x') \\
-      & = & x * (x + x') + 1 * (x + x') \\
-      & = & (x * x + x * x') + (x + x') \\
-      & = & (x * x') + (x + x + x') \\
-      & = & 0 + 1 \\
-      & = & 1 \\
-\end{eqnarray*}
+\begin{align*}
+A & = [x + (y + z)] * [(x + y) + z] \\
+  & = [x + (y + z)] * (x + y) + [x + (y + z)] * z \\
+  & = \{[x + (y + z)] * x + [x + (y + z)] * y\} + [x * z + (y + z) * z]\\
+  & = \{x + [x * y + (y + z) * y]\} + (x * z + z)\\
+  & = [x + (x * y + y)] + z\\
+  & = (x + y) + z
+\end{align*}
+
+so: $A = x + (y + z) = (x + y) + z$.
+\end{proof}
+
+Boundedness Laws
+\begin{equation}
+x + 1 = 1
+\end{equation}
+
+\begin{equation}
+x * 0 = 0
+\end{equation}
+
+\begin{proof}
+\begin{align*}
+x + 1 & = (x + 1) * 1 \\
+      & = (x + 1) * (x + x') \\
+      & = x * (x + x') + 1 * (x + x') \\
+      & = (x * x + x * x') + (x + x') \\
+      & = (x * x') + (x + x') \\
+      & = 0 + 1 \\
+      & = 1
+\end{align*}
+\end{proof}
 
 \end{document}
