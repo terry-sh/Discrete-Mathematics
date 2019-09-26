@@ -5,28 +5,85 @@
 
 \begin{document}
 
-Idempotent laws: 1. $x + x = x$; 2. $x * x = 0$.
+\title{Prove for theorems of axiomatic boolean algebra}
 
-Proof 1:
+Prove idempotent laws:
+ \begin{equation}
+ x + x = x
+ \end{equation}
 
+ \begin{equation}
+ x * x = x
+ \end{equation}
+
+Proof $x + x = x$:
 \begin{eqnarray*}
 x + x & = & (x + x) * 1 \\
-& = & (x + x) * (x + x') \\
-& = & x + (x * x') \\
-& = & x + 0 \\
-& = & x
+      & = & (x + x) * (x + x') \longleftarrow \text{apply distributive laws} \\
+      & = & x + (x * x') \\
+      & = & x + 0 \\
+      & = & x
 \end{eqnarray*}
 
-Key: $x + (x * x') = (x + x) * (x + x')$
+Key point: $x + (x * x') = (x + x) * (x + x') \implies (x + x) * (x + x') = x + (x * x')$
 
-Proof 2:
-
+Proof $x * x = x$:
 \begin{eqnarray*}
 x * x & = & (x * x) + 0 \\
-& = & (x * x) + (x * x') \\
-& = & x * (x + x') \\
-& = & x * 1 \\
-& = & x
+      & = & (x * x) + (x * x') \\
+      & = & x * (x + x') \\
+      & = & x * 1 \\
+      & = & x
+\end{eqnarray*}
+
+Absorption Laws: 1. $x + (x * y) = x$ 2. $x * (x + y) = x$
+
+\begin{eqnarray*}
+x + (x * y) & = & (x * 1) + (x * y) \\
+            & = & x * (1 + y) \\
+            & = & x * 1 \\
+            & = & x \\
+\end{eqnarray*}
+
+\begin{eqnarray*}
+x * (x + y) & = & x * x + x * y \\
+            & = & x + (x * y) \\
+            & = & x \\
+\end{eqnarray*}
+
+
+Associative Laws: 1. x + (y + z) = (x + y) + z 2. (x * y) * z = x * (y * z)
+
+let $A = [x + (y + z)] * [(x + y) + z]$, then:
+\begin{eqnarray*}
+A & = & [(x + y) + z] * [x + (y + z)] \\
+  & = & [(x + y) + z] * x + [(x + y) + z] * (y + z) \\
+  & = & [(x + y) * x + x * z] + \{[(x + y) + z] * y + [(x + y) + z] * z\} \\
+  & = & [x + x * z] + \{[(x + y) * y + z * y] + z\} \\
+  & = & x + \{(y + z * y) + z\} \\
+  & = & x + (y + z) \\
+\end{eqnarray*}
+but also:
+\begin{eqnarray*}
+A & = & [x + (y + z)] * [(x + y) + z] \\
+  & = & [x + (y + z)] * (x + y) + [x + (y + z)] * z \\
+  & = & \{[x + (y + z)] * x + [x + (y + z)] * y\} + [x * z + (y + z) * z]\\
+  & = & \{x + [x * y + (y + z) * y]\} + (x * z + z)\\
+  & = & [x + (x * y + y)] + z\\
+  & = & (x + y) + z \\
+\end{eqnarray*}
+so: $A = x + (y + z) = (x + y) + z$.
+
+Boundedness Laws: 1. x + 1 = 1, x * 0 = 0
+Proof $x + 1 = 1$:
+\begin{eqnarray*}
+x + 1 & = & (x + 1) * 1 \\
+      & = & (x + 1) * (x + x') \\
+      & = & x * (x + x') + 1 * (x + x') \\
+      & = & (x * x + x * x') + (x + x') \\
+      & = & (x * x') + (x + x + x') \\
+      & = & 0 + 1 \\
+      & = & 1 \\
 \end{eqnarray*}
 
 \end{document}
