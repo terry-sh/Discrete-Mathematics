@@ -2,14 +2,53 @@
   \usepackage{amsmath}
   \usepackage{amssymb}
   \usepackage{amsthm}
+
   \newtheorem{theorem}{Theorem}[section]
+  \newtheorem{axiom}{Axiom}[section]
   \newcommand{\setcomp}[1] {{#1}^{\mathsf{c}}}
 
 \begin{document}
 
 \title{Prove for theorems of axiomatic boolean algebra}
 
+An algebra with domain $B$, binary operator $+$, $*$, unary operator $'$, unit element $1$, and zero element $0$,
+that satisfies the rules:
+
+\begin{axiom}[Commutative laws]~ %%linebreak
+\label{commutative}
+\begin{enumerate}
+  \item $x + y = y + x$ 
+  \item $x * y = y * x$
+\end{enumerate}
+\end{axiom}
+
+\begin{axiom}[Distributive laws]~ %%linebreak
+\label{distributive}
+\begin{enumerate}
+  \item $x + (y * z) = (x + y) * (x + z)$
+  \item $x * (y + z) = (x * y) + (x * z)$
+\end{enumerate}
+\end{axiom}
+
+\begin{axiom}[Identity laws]~ %%linebreak
+\label{identity}
+\begin{enumerate}
+  \item $x + 0 = x$
+  \item $x * 1 = x$
+\end{enumerate}
+\end{axiom}
+
+\begin{axiom}[Complement laws]~ %%linebreak
+\label{complement}
+\begin{enumerate}
+  \item $x + x' = 1$
+  \item $x * x' = 0$
+\end{enumerate}
+\end{axiom}
+
+\newpage
 \begin{theorem}[Idempotent laws]
+
 \label{idempotent}
 \[ x + x = x \]
 \[ x * x = x \]
@@ -18,8 +57,8 @@
 \begin{proof}
 \begin{align*}
 x + x & = (x + x) * 1 \\
-      & = (x + x) * (x + x') & \text{distributive laws} \\
-      & = x + (x * x') \\
+      & = (x + x) * (x + x') & \ref{distributive} \\
+      & = x + (x * x')       & \ref{complement} \\
       & = x + 0 \\
       & = x
 \end{align*}
@@ -28,8 +67,8 @@ x + x & = (x + x) * 1 \\
 \begin{proof}
 \begin{align*}
 x * x & = (x * x) + 0 \\
-      & = (x * x) + (x * x') & \text{distributive laws} \\
-      & = x * (x + x') \\
+      & = (x * x) + (x * x') & \ref{distributive} \\
+      & = x * (x + x')       & \ref{complement} \\
       & = x * 1 \\
       & = x
 \end{align*}
@@ -44,20 +83,20 @@ x * x & = (x * x) + 0 \\
 
 \begin{proof}
 \begin{align*}
-x + 1 & = (x + 1) * 1 & \text{identity laws} \\
-      & = (x + 1) * (x + x') & \text{distributive laws} \\
-      & = x + (1 * x') & \text{identity laws} \\
-      & = x + x' & \text{complement laws} \\
+x + 1 & = (x + 1) * 1        & \ref{identity} \\
+      & = (x + 1) * (x + x') & \ref{distributive} \\
+      & = x + (1 * x')       & \ref{identity} \\
+      & = x + x'             & \ref{complement} \\
       & = 1
 \end{align*}
 \end{proof}
 
 \begin{proof}
 \begin{align*}
-x * 0 & = (x * 0) + 0 & \text{identity laws}  \\
-      & = (x * 0) + (x * x') & \text{distributive laws} \\
-      & = x * (0 + x') & \text{identity laws} \\
-      & = x * x' & \text{complement laws} \\
+x * 0 & = (x * 0) + 0        & \ref{identity}  \\
+      & = (x * 0) + (x * x') & \ref{distributive} \\
+      & = x * (0 + x')       & \ref{identity} \\
+      & = x * x'             & \ref{complement} \\
       & = 0
 \end{align*}
 \end{proof}
@@ -71,8 +110,8 @@ x * 0 & = (x * 0) + 0 & \text{identity laws}  \\
 
 \begin{proof}
 \begin{align*}
-x + (x * y) & = (x * 1) + (x * y) & \text{distributive laws} \\
-            & = x * (1 + y) & \text{boundedness laws} \\
+x + (x * y) & = (x * 1) + (x * y) & \ref{distributive} \\
+            & = x * (1 + y)       & \ref{boundedness} \text{boundedness} \\
             & = x * 1 \\
             & = x
 \end{align*}
@@ -80,8 +119,8 @@ x + (x * y) & = (x * 1) + (x * y) & \text{distributive laws} \\
 
 \begin{proof}
 \begin{align*}
-x * (x + y) & = (x + x) * (x + y) & \text{distributive laws} \\
-            & = x + (x * y) & \text{absorption laws} \\
+x * (x + y) & = (x + x) * (x + y) & \ref{distributive} \\
+            & = x + (x * y)       & \ref{absorption} \\
             & = x
 \end{align*}
 \end{proof}
@@ -121,7 +160,7 @@ so: $A = x + (y + z) = (x + y) + z$.
 \newpage
 \begin{theorem}[Involutioin Laws]
 \label{involutioin}
-\[ (x')' =x \]
+\[ (x')' = x \]
 \end{theorem}
 
 \begin{proof}
@@ -145,7 +184,7 @@ so:
 \begin{align*}
 (x')' & = (x')' + x \\
       & = [(x')' * x] + x \\
-      & = x + [x * (x')'] & \text{absorption laws} \\
+      & = x + [x * (x')'] & \ref{absorption} \\
       & = x
 \end{align*}
 
