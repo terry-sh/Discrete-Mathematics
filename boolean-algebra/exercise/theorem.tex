@@ -18,7 +18,7 @@
 \begin{proof}
 \begin{align*}
 x + x & = (x + x) * 1 \\
-      & = (x + x) * (x + x') \longleftarrow \text{distributive laws} \\
+      & = (x + x) * (x + x') & \text{distributive laws} \\
       & = x + (x * x') \\
       & = x + 0 \\
       & = x
@@ -28,26 +28,51 @@ x + x & = (x + x) * 1 \\
 \begin{proof}
 \begin{align*}
 x * x & = (x * x) + 0 \\
-      & = (x * x) + (x * x') \longleftarrow \text{distributive laws} \\
+      & = (x * x) + (x * x') & \text{distributive laws} \\
       & = x * (x + x') \\
       & = x * 1 \\
       & = x
 \end{align*}
 \end{proof}
 
-Absorption Laws:
-\begin{equation}
-x + (x * y) = x
-\end{equation}
-
-\begin{equation}
-x * (x + y) = x
-\end{equation}
+\newpage
+\begin{theorem}[Boundedness Laws]
+\label{boundedness}
+\[ x + 1 = 1 \]
+\[ x * 0 = 0 \]
+\end{theorem}
 
 \begin{proof}
 \begin{align*}
-x + (x * y) & = (x * 1) + (x * y)  \longleftarrow \text{distributive laws} \\
-            & = x * (1 + y) \\
+x + 1 & = (x + 1) * 1 & \text{identity laws} \\
+      & = (x + 1) * (x + x') & \text{distributive laws} \\
+      & = x + (1 * x') & \text{identity laws} \\
+      & = x + x' & \text{complement laws} \\
+      & = 1
+\end{align*}
+\end{proof}
+
+\begin{proof}
+\begin{align*}
+x * 0 & = (x * 0) + 0 & \text{identity laws}  \\
+      & = (x * 0) + (x * x') & \text{distributive laws} \\
+      & = x * (0 + x') & \text{identity laws} \\
+      & = x * x' & \text{complement laws} \\
+      & = 0
+\end{align*}
+\end{proof}
+
+\newpage
+\begin{theorem}[Absorption Laws]
+\label{absorption}
+\[ x + (x * y) = x \]
+\[ x * (x + y) = x \]
+\end{theorem}
+
+\begin{proof}
+\begin{align*}
+x + (x * y) & = (x * 1) + (x * y) & \text{distributive laws} \\
+            & = x * (1 + y) & \text{boundedness laws} \\
             & = x * 1 \\
             & = x
 \end{align*}
@@ -55,37 +80,37 @@ x + (x * y) & = (x * 1) + (x * y)  \longleftarrow \text{distributive laws} \\
 
 \begin{proof}
 \begin{align*}
-x * (x + y) & = x * x + x * y \longleftarrow \text{distributive laws} \\
-            & = x + (x * y) \\
+x * (x + y) & = (x + x) * (x + y) & \text{distributive laws} \\
+            & = x + (x * y) & \text{absorption laws} \\
             & = x
 \end{align*}
 \end{proof}
 
-Associative Laws:
-\begin{equation}
-x + (y + z) = (x + y) + z
-\end{equation}
-\begin{equation}
-(x * y) * z = x * (y * z)
-\end{equation}
+\newpage
+
+\begin{theorem}[Associative Laws]
+\label{associative}
+\[ x + (y + z) = (x + y) + z \]
+\[ (x * y) * z = x * (y * z) \]
+\end{theorem}
 
 \begin{proof}
 let $A = [x + (y + z)] * [(x + y) + z]$, then:
 \begin{align*}
 A & = [(x + y) + z] * [x + (y + z)] \\
-  & = [(x + y) + z] * x + [(x + y) + z] * (y + z) \\
-  & = [(x + y) * x + x * z] + \{[(x + y) + z] * y + [(x + y) + z] * z\} \\
-  & = [x + x * z] + \{[(x + y) * y + z * y] + z\} \\
-  & = x + \{(y + z * y) + z\} \\
+  & = \{[(x + y) + z] * x\} + \{[(x + y) + z] * (y + z)\} \\
+  & = \{[(x + y) * x] + (z * x)\} + \{ \{[(x + y) + z] * y\} + \{[(x + y) + z] * z\} \} \\
+  & = [x + (x * z)] + \{\{[(x + y) * y] + (z * y)\} + z\} \\
+  & = x + \{[y + (y * z)] + z\} \\
   & = x + (y + z)
 \end{align*}
 but also:
 
 \begin{align*}
 A & = [x + (y + z)] * [(x + y) + z] \\
-  & = [x + (y + z)] * (x + y) + [x + (y + z)] * z \\
-  & = \{[x + (y + z)] * x + [x + (y + z)] * y\} + [x * z + (y + z) * z]\\
-  & = \{x + [x * y + (y + z) * y]\} + (x * z + z)\\
+  & = \{[x + (y + z)] * (x + y)\} + \{[x + (y + z)] * z\} \\
+  & = \{\{[x + (y + z)] * x\} + \{[x + (y + z)] * y\}\} + \{(x * z) + [(y + z) * z]\}\\
+  & = \{x + [(x * y) + (y + z) * y]\} + [(x * z) + z]\\
   & = [x + (x * y + y)] + z\\
   & = (x + y) + z
 \end{align*}
@@ -93,25 +118,37 @@ A & = [x + (y + z)] * [(x + y) + z] \\
 so: $A = x + (y + z) = (x + y) + z$.
 \end{proof}
 
-Boundedness Laws
-\begin{equation}
-x + 1 = 1
-\end{equation}
-
-\begin{equation}
-x * 0 = 0
-\end{equation}
+\newpage
+\begin{theorem}[Involutioin Laws]
+\label{involutioin}
+\[ (x')' =x \]
+\end{theorem}
 
 \begin{proof}
 \begin{align*}
-x + 1 & = (x + 1) * 1 \\
-      & = (x + 1) * (x + x') \\
-      & = x * (x + x') + 1 * (x + x') \\
-      & = (x * x + x * x') + (x + x') \\
-      & = (x * x') + (x + x') \\
-      & = 0 + 1 \\
-      & = 1
+(x')' & = (x')' + 0 \\
+      & = (x')' + (x' * x) \\
+      & = [(x')' + x'] * [(x')' + x]\\
+      & = 1 * [(x')' + x] \\
+      & = (x')' + x
 \end{align*}
+
+\begin{align*}
+(x')' & = (x')' * 1 \\
+      & = (x')' * (x' + x) \\
+      & = [(x')' * x'] + [(x')' * x]\\
+      & = 0 + [(x')' * x] \\
+      & = (x')' * x
+\end{align*}
+
+so:
+\begin{align*}
+(x')' & = (x')' + x \\
+      & = [(x')' * x] + x \\
+      & = x + [x * (x')'] & \text{absorption laws} \\
+      & = x
+\end{align*}
+
 \end{proof}
 
 \end{document}
