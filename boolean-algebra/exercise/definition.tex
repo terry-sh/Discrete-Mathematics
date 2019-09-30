@@ -1,0 +1,37 @@
+
+\section {Definition of Boolean Algebra}
+
+A boolean algebra is an algebraic system $(B, +, *, ')$,
+where $+$ and $*$ are binary, and $'$ is unary, such that:
+
+\begin{axiom}[Closure]
+$B$ is closed under $+$, $*$, $'$.
+
+\[ \forall x, \forall y \in B : x + y \in B, x * y \in B, x' \in B \]
+\end{axiom}
+
+\begin{axiom}[Commutative Laws]\label{commutative}
+Both $+$ and $*$ are commutative.
+
+\[ \forall x, \forall y \in B : x + y = y + x , x * y = y * x \]
+\end{axiom}
+
+\begin{axiom}[Distributive Laws]\label{distributive}
+Both $+$ and $*$ distribute over the other.
+\[ \forall x, \forall y \in B :
+    x + (y * z) = (x + y) * (x + z) ,
+    x * (y + z) = (x * y) + (x * z) \]
+\end{axiom}
+
+\begin{axiom}[Identity Laws]\label{identity}
+
+Both $+$ and $*$ have identities $0$ and $1$ respectively.
+
+\[ \forall x \in B : x + 0 = x , x * 1 = x \]
+\end{axiom}
+
+\begin{axiom}[Complement Laws]\label{complement}
+\[ \forall x \in B : x + x' = 1 , x * x' = 0 \]
+\end{axiom}
+
+\newpage

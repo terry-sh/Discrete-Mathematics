@@ -1,54 +1,7 @@
-\documentclass{article}
-  \usepackage{amsmath}
-  \usepackage{amssymb}
-  \usepackage{amsthm}
 
-  \newtheorem{theorem}{Theorem}[section]
-  \newtheorem{axiom}{Axiom}[section]
-  \newcommand{\setcomp}[1] {{#1}^{\mathsf{c}}}
+\section {Theorems of Boolean Algebra}
 
-\begin{document}
-
-\title{Prove for theorems of axiomatic boolean algebra}
-
-An algebra with domain $B$, binary operator $+$, $*$, unary operator $'$, unit element $1$, and zero element $0$,
-that satisfies the rules:
-
-\begin{axiom}[Commutative laws]~ %%linebreak
-\label{commutative}
-\begin{enumerate}
-  \item $x + y = y + x$ 
-  \item $x * y = y * x$
-\end{enumerate}
-\end{axiom}
-
-\begin{axiom}[Distributive laws]~ %%linebreak
-\label{distributive}
-\begin{enumerate}
-  \item $x + (y * z) = (x + y) * (x + z)$
-  \item $x * (y + z) = (x * y) + (x * z)$
-\end{enumerate}
-\end{axiom}
-
-\begin{axiom}[Identity laws]~ %%linebreak
-\label{identity}
-\begin{enumerate}
-  \item $x + 0 = x$
-  \item $x * 1 = x$
-\end{enumerate}
-\end{axiom}
-
-\begin{axiom}[Complement laws]~ %%linebreak
-\label{complement}
-\begin{enumerate}
-  \item $x + x' = 1$
-  \item $x * x' = 0$
-\end{enumerate}
-\end{axiom}
-
-\newpage
-\begin{theorem}[Idempotent laws]
-
+\begin{theorem}[Idempotent Laws]
 \label{idempotent}
 \[ x + x = x \]
 \[ x * x = x \]
@@ -56,20 +9,20 @@ that satisfies the rules:
 
 \begin{proof}
 \begin{align*}
-x + x & = (x + x) * 1 \\
-      & = (x + x) * (x + x') & \ref{distributive} \\
-      & = x + (x * x')       & \ref{complement} \\
-      & = x + 0 \\
+x + x & = (x + x) * 1        & \tag{\ref{identity} identity}\\
+      & = (x + x) * (x + x') & \tag{\ref{distributive} distributive} \\
+      & = x + (x * x')       & \tag{\ref{complement} distributive} \\
+      & = x + 0              & \tag{\ref{identity} identity} \\
       & = x
 \end{align*}
 \end{proof}
 
 \begin{proof}
 \begin{align*}
-x * x & = (x * x) + 0 \\
-      & = (x * x) + (x * x') & \ref{distributive} \\
-      & = x * (x + x')       & \ref{complement} \\
-      & = x * 1 \\
+x * x & = (x * x) + 0        & \tag{\ref{identity} identity} \\
+      & = (x * x) + (x * x') & \tag{\ref{distributive} distributive} \\
+      & = x * (x + x')       & \tag{\ref{complement} complement} \\
+      & = x * 1              & \tag{\ref{identity} identity} \\
       & = x
 \end{align*}
 \end{proof}
@@ -83,20 +36,20 @@ x * x & = (x * x) + 0 \\
 
 \begin{proof}
 \begin{align*}
-x + 1 & = (x + 1) * 1        & \ref{identity} \\
-      & = (x + 1) * (x + x') & \ref{distributive} \\
-      & = x + (1 * x')       & \ref{identity} \\
-      & = x + x'             & \ref{complement} \\
+x + 1 & = (x + 1) * 1        & \tag{\ref{identity} identity} \\
+      & = (x + 1) * (x + x') & \tag{\ref{distributive} distributive} \\
+      & = x + (1 * x')       & \tag{\ref{identity} identity} \\
+      & = x + x'             & \tag{\ref{complement} complement} \\
       & = 1
 \end{align*}
 \end{proof}
 
 \begin{proof}
 \begin{align*}
-x * 0 & = (x * 0) + 0        & \ref{identity}  \\
-      & = (x * 0) + (x * x') & \ref{distributive} \\
-      & = x * (0 + x')       & \ref{identity} \\
-      & = x * x'             & \ref{complement} \\
+x * 0 & = (x * 0) + 0        & \tag{\ref{identity} identity}  \\
+      & = (x * 0) + (x * x') & \tag{\ref{distributive} distributive} \\
+      & = x * (0 + x')       & \tag{\ref{identity} identity} \\
+      & = x * x'             & \tag{\ref{complement} complement} \\
       & = 0
 \end{align*}
 \end{proof}
@@ -110,17 +63,17 @@ x * 0 & = (x * 0) + 0        & \ref{identity}  \\
 
 \begin{proof}
 \begin{align*}
-x + (x * y) & = (x * 1) + (x * y) & \ref{distributive} \\
-            & = x * (1 + y)       & \ref{boundedness} \text{boundedness} \\
-            & = x * 1 \\
+x + (x * y) & = (x * 1) + (x * y) & \tag{\ref{distributive} distributive} \\
+            & = x * (1 + y)       & \tag{\ref{boundedness} boundedness} \\
+            & = x * 1             & \tag{\ref{identity} identity} \\
             & = x
 \end{align*}
 \end{proof}
 
 \begin{proof}
 \begin{align*}
-x * (x + y) & = (x + x) * (x + y) & \ref{distributive} \\
-            & = x + (x * y)       & \ref{absorption} \\
+x * (x + y) & = (x + x) * (x + y) & \tag{\ref{distributive} distributive} \\
+            & = x + (x * y)       & \tag{\ref{absorption} absorption} \\
             & = x
 \end{align*}
 \end{proof}
@@ -134,7 +87,7 @@ x * (x + y) & = (x + x) * (x + y) & \ref{distributive} \\
 \end{theorem}
 
 \begin{proof}
-let $A = [x + (y + z)] * [(x + y) + z]$, then:
+Let $A = [x + (y + z)] * [(x + y) + z]$, then:
 \begin{align*}
 A & = [(x + y) + z] * [x + (y + z)] \\
   & = \{[(x + y) + z] * x\} + \{[(x + y) + z] * (y + z)\} \\
@@ -143,8 +96,8 @@ A & = [(x + y) + z] * [x + (y + z)] \\
   & = x + \{[y + (y * z)] + z\} \\
   & = x + (y + z)
 \end{align*}
-but also:
 
+But also:
 \begin{align*}
 A & = [x + (y + z)] * [(x + y) + z] \\
   & = \{[x + (y + z)] * (x + y)\} + \{[x + (y + z)] * z\} \\
@@ -154,7 +107,8 @@ A & = [x + (y + z)] * [(x + y) + z] \\
   & = (x + y) + z
 \end{align*}
 
-so: $A = x + (y + z) = (x + y) + z$.
+Thus:
+$A = x + (y + z) = (x + y) + z$.
 \end{proof}
 
 \newpage
@@ -167,7 +121,7 @@ so: $A = x + (y + z) = (x + y) + z$.
 \begin{align*}
 (x')' & = (x')' + 0 \\
       & = (x')' + (x' * x) \\
-      & = [(x')' + x'] * [(x')' + x]\\
+      & = [(x')' + x'] * [(x')' + x] \\
       & = 1 * [(x')' + x] \\
       & = (x')' + x
 \end{align*}
@@ -175,19 +129,92 @@ so: $A = x + (y + z) = (x + y) + z$.
 \begin{align*}
 (x')' & = (x')' * 1 \\
       & = (x')' * (x' + x) \\
-      & = [(x')' * x'] + [(x')' * x]\\
+      & = [(x')' * x'] + [(x')' * x] \\
       & = 0 + [(x')' * x] \\
       & = (x')' * x
 \end{align*}
 
-so:
+Thus:
 \begin{align*}
 (x')' & = (x')' + x \\
-      & = [(x')' * x] + x \\
-      & = x + [x * (x')'] & \ref{absorption} \\
+      & = [(x')' * x] + x & \tag{\ref{commutative} commutative} \\
+      & = x + [x * (x')'] & \tag{\ref{absorption} absorption} \\
       & = x
 \end{align*}
 
 \end{proof}
 
-\end{document}
+\newpage
+\begin{theorem}[Uniqueness of Complement]
+\[ (a + x = 1 \land a * x = 0) \land (a + y = 1 \land a * y = 0) \implies x = y \]
+\end{theorem}
+
+\begin{proof}
+Suppose $a + x = 1 \land a * x = 0$ and $a + y = 1 \land a * y = 0$, then:
+\begin{align*}
+x & = x * 1 \\
+  & = x * (a + y) \\
+  & = (x * a) + (x * y) \\
+  & = 0 + (x * y) \\
+  & = (a * y) + (x * y) \\
+  & = y * (a + x) \\
+  & = y * 1 \\
+  & = y
+\end{align*}
+\end{proof}
+
+\newpage
+\begin{theorem}[DeMorgan Laws]
+\[ (x + y)' = x' * y' \]
+\[ (x * y)' = x' + y' \]
+\end{theorem}
+
+\begin{proof}
+
+\begin{align*}
+    (x + y) + (x' * y')
+& = [(x + y) + x'] * [(x + y) + y'] \\
+& = [(x + x') + y] * [x + (y + y')] \\
+& = (1 + y) * (x + 1) \\
+& = 1 * 1 \\
+& = 1
+\end{align*}
+
+\begin{align*}
+    (x + y) * (x' * y')
+& = (x' * y') * (x + y) \\
+& = [(x' * y') * x] + [(x' + y') * y] \\
+& = [(x * x') * y'] + [x' * (y' * y)] \\
+& = (0 * y') + (x' * 0) \\
+& = 0 * 0 \\
+& = 0
+\end{align*}
+Then apply the uniqueness of complement, $(x + y)' = x' * y'$
+\end{proof}
+
+\begin{proof}
+
+% \[ (x * y) + (x' + y') = 1 \]
+\begin{align*}
+    (x * y) + (x' + y')
+& = (x' + y') + (x * y) \\
+& = [(x' + y') + x] * [(x' + y') + y] \\
+& = [(x' + x) + y'] * [x' + (y' + y)] \\
+& = [1 + y'] * [x' + 1] \\
+& = 1 * 1 \\
+& = 1
+\end{align*}
+
+% \[ (x * y) * (x' + y') = 0 \]
+\begin{align*}
+    (x * y) * (x' + y')
+& = [(x * y) * x'] + [(x * y) * y'] \\
+& = [(x * y) * x'] + [(x * y) * y'] \\
+& = [(x * x') * y] * [x * (y * y')] \\
+& = (0 + y) * (x * 0) \\
+& = 0 * 0 \\
+& = 0
+\end{align*}
+
+Then apply the uniqueness of complement, $(x * y)' = x' + y'$
+\end{proof}
